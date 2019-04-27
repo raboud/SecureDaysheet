@@ -1,0 +1,55 @@
+@import "../../../variables";
+
+.container {
+  margin-bottom: 50px;
+}
+
+.card {
+  margin-top: 50px;
+  margin-bottom: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-color: $primary;
+  border-radius: 25px;
+  border-width: 4px;
+  widows: 100;
+
+  &-img-top {
+    display: block;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  &-text {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &-badge {
+    $size: 2.0rem;
+    background-color: $red;
+    border-radius: 50%;
+    color: $white;
+    display: block;
+    height: $size;
+    left: 65%;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    top: 10%;
+    transform: translateX(-38%);
+    -ms-transform: translateX(-38%);
+    transition: all $animation-speed-default;
+    width: $size;
+  }
+
+  &-badge-text{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);  }
+}

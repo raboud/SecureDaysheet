@@ -17,6 +17,7 @@ import { AuthService } from './Services/auth.service';
 import { ApiService } from './Services/api.service';
 import { ConfigurationService } from './Services/configuration.service';
 import { StorageService } from './Services/storage.service';
+import { MessageStatusComponent } from './Components/message-status/message-status.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { StorageService } from './Services/storage.service';
     FooterComponent,
     DashboardComponent,
     LoginComponent,
-    PatientsComponent
+    PatientsComponent,
+    MessageStatusComponent
   ],
   imports: [
     BrowserModule,
