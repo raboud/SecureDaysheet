@@ -6,18 +6,29 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { LoginComponent } from './Components/login/login.component';
-import { PatientsComponent } from './Components/patients/patients.component';
+import { PatientListComponent as PatientListComponent } from './Components/patient/patient-list.component';
+import { PatientDetailComponent } from './Components/patient/patient-detail.component';
+import { ProviderListComponent } from './Components/provider/provider-list.component';
+import { ProviderDetailComponent } from './Components/provider/provider-detail.component';
+import { DaysheetComponent } from './Components/daysheet/daysheet.component';
+import { MessageStatusComponent } from './Components/messages/message-status.component';
+import { MessageListComponent } from './Components/messages/message-list.component';
+import { MessageDetailComponent } from './Components/messages/message-detail.component';
+import { ReportListComponent } from './Components/report/report-list.component';
+import { ReportDetailsComponent } from './Components/report/report-details.component';
+import { SettingListComponent } from './Components/setting/setting-list.component';
+import { SettingDetailsComponent } from './Components/setting/setting-details.component';
 
 import { AuthService } from './Services/auth.service';
-import { ApiService } from './Services/api.service';
+import { ApiService, ApiMock } from './Services/api.service';
 import { ConfigurationService } from './Services/configuration.service';
 import { StorageService } from './Services/storage.service';
-import { MessageStatusComponent } from './Components/message-status/message-status.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +37,18 @@ import { MessageStatusComponent } from './Components/message-status/message-stat
     FooterComponent,
     DashboardComponent,
     LoginComponent,
-    PatientsComponent,
-    MessageStatusComponent
+    PatientListComponent,
+    MessageStatusComponent,
+    PatientDetailComponent,
+    ProviderListComponent,
+    ProviderDetailComponent,
+    MessageListComponent,
+    MessageDetailComponent,
+    ReportListComponent,
+    ReportDetailsComponent,
+    SettingListComponent,
+    SettingDetailsComponent,
+    DaysheetComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +61,7 @@ import { MessageStatusComponent } from './Components/message-status/message-stat
   ],
   providers: [
     AuthService,
-    ApiService,
+    { provide: ApiService, useClass: ApiMock},
     ConfigurationService,
     StorageService,
   ],

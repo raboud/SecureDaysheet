@@ -1,9 +1,119 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
+
+import { ConfigurationService } from './configuration.service';
+import { IPatient, IPage } from '../models';
+
+export interface IApiService {
+  load(): Observable<boolean>;
+  getPaitentPage(
+    pageIndex: number,
+    pageSize: number,
+    search?: string
+  ): Observable<IPage<IPatient>>;
+  getPatient(id: string): Observable<IPatient>;
+}
 
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class ApiService implements IApiService {
+  private patientUrl = '';
 
-  constructor() { }
+  constructor(
+    private http: HttpClient,
+    private config: ConfigurationService
+  ) {
+  }
+
+  load(): Observable<boolean> {
+    return this.config.load().pipe(
+      map(() => {
+        this.patientUrl = this.config.serverSettings.apiUrl + '/api/v1/patients';
+        return true;
+      })
+    );
+  }
+
+  getPaitentPage(
+    pageIndex: number,
+    pageSize: number,
+    search?: string
+  ): Observable<IPage<IPatient>> {
+    let url = this.patientUrl;
+    url = url + '?pageIndex=' + pageIndex + '&pageSize=' + pageSize;
+
+    return this.http.get<IPage<IPatient>>(url + '/page');
+  }
+
+  getPatient(id: string): Observable<IPatient> {
+    const url = this.patientUrl + '/id';
+
+    return this.http.get<IPatient>(url);
+  }
+
 }
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ApiMock implements IApiService {
+  private patientUrl = '';
+
+  constructor(
+    private http: HttpClient,
+    private config: ConfigurationService
+  ) {
+  }
+
+  load(): Observable<boolean> {
+    return of(true);
+  }
+
+  getPaitentPage(
+    pageIndex: number,
+    pageSize: number,
+    search?: string
+  ): Observable<IPage<IPatient>> {
+    const items: IPage<IPatient> = {
+      Count: 1,
+      PageIndex: pageIndex,
+      PageSize: pageSize,
+      Data: [],
+    };
+
+    const item: IPatient = {
+      Id: '12345',
+      LastName: 'Raboud',
+      FirstName: 'Robert',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '404-991-9375',
+      InActive: false
+    };
+    items.Data.push(item);
+    return of(items);
+  }
+
+  getPatient(id: string): Observable<IPatient> {
+    const data: IPatient = {
+      Id: '12345',
+      LastName: 'Raboud',
+      FirstName: 'Robert',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '404-991-9375',
+      InActive: false
+    };
+    return of(data);
+  }
+
+}
+
