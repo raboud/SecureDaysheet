@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { IPage, IPatient } from 'src/app/models';
 import { Subscription, Observable, throwError } from 'rxjs';
-
-import { AuthService } from 'src/app/Services/auth.service';
 import { ApiService } from 'src/app/Services/api.service';
+import { AuthService } from 'src/app/Services/auth.service';
 
 @Component({
   selector: 'app-patient-list',
@@ -31,7 +31,8 @@ export class PatientListComponent implements OnInit {
     private api: ApiService,
     private securityService: AuthService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private location: Location
     ) { }
 
   ngOnInit() {
@@ -42,6 +43,14 @@ export class PatientListComponent implements OnInit {
 
   loadData() {
     this.ready = true;
+  }
+
+  onBack() {
+    this.location.back();
+  }
+
+  onAdd(){
+
   }
 
   getItems(pageSize: number, pageIndex: number) {
