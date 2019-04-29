@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/Services/api.service';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
 import { IPatient } from 'src/app/models';
+
+import { ApiService } from 'src/app/Services/api.service';
 
 @Component({
   selector: 'app-patient-detail',
@@ -10,8 +13,12 @@ import { IPatient } from 'src/app/models';
 })
 export class PatientDetailComponent implements OnInit {
   public item: IPatient = {} as IPatient;
-
-  constructor(private api: ApiService, private route: ActivatedRoute) { }
+  pageTitle = 'Patient';
+  constructor(
+    private api: ApiService,
+    private route: ActivatedRoute,
+    private location: Location
+    ) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -25,6 +32,14 @@ export class PatientDetailComponent implements OnInit {
     this.api.getPatient(id).subscribe(item => {
       this.item = item;
     });
+  }
+
+  onBack() {
+    this.location.back();
+  }
+
+  onEdit() {
+
   }
 
 

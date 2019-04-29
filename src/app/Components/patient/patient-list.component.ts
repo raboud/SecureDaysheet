@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Subscription, Observable, throwError } from 'rxjs';
 
 import { IPage, IPatient } from 'src/app/models';
-import { Subscription, Observable, throwError } from 'rxjs';
 import { ApiService } from 'src/app/Services/api.service';
 import { AuthService } from 'src/app/Services/auth.service';
 
@@ -49,7 +49,11 @@ export class PatientListComponent implements OnInit {
     this.location.back();
   }
 
-  onAdd(){
+  onAdd() {
+
+  }
+
+  onSearch() {
 
   }
 
