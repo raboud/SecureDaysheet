@@ -493,19 +493,13 @@ export class ApiMock implements IApiService {
       PageSize: pageSize,
       Data: [],
     };
-    let start = (pageIndex ) * pageSize;
-    console.log(start);
-    let end = (pageIndex  + 1)* pageSize;
-    console.log(end);
+    const start = (pageIndex ) * pageSize;
+    const end = (pageIndex  + 1) * pageSize;
     page.Data = this.patients.slice(start, end);
-    console.log(page);
     return of(page);
   }
 
   getPatient(id: string): Observable<IPatient> {
-    console.log(id);
-    console.log(this.patients);
-    console.log(this.patients.find(i => i.Id === id));
     return of(this.patients.find(i => i.Id === id));
   }
 
@@ -520,19 +514,13 @@ export class ApiMock implements IApiService {
       PageSize: pageSize,
       Data: [],
     };
-    let start = (pageIndex ) * pageSize;
-    console.log(start);
-    let end = (pageIndex  + 1)* pageSize;
-    console.log(end);
+    const start = (pageIndex ) * pageSize;
+    const end = (pageIndex  + 1) * pageSize;
     page.Data = this.provider.slice(start, end);
-    console.log(page);
     return of(page);
   }
 
   getProvider(id: string): Observable<IProvider> {
-    console.log(id);
-    console.log(this.provider);
-    console.log(this.provider.find(i => i.Id === id));
     return of(this.provider.find(i => i.Id === id));
   }
 
