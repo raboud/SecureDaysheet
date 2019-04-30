@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-xl navbar-dark bg-primary">
 
     <a class="navbar-brand" href="#">
-      <img src="assets/lock.png" width="80" height="80" class="d-inline-block" alt="">
+      <img src="assets/lock.png" width="50" height="50" class="d-inline-block" alt="">
     </a>
     <div class="navbar-brand-title">
       Secure <span style='color: white;'>DaySheet</span>
@@ -16,7 +16,7 @@
           <a class="dropdown-item text-primary" routerLinkActive="active" (click)="logout();isActive = true">Logout</a>
         </div>
       </li>
-      <img *ngIf='!authenticated' src="assets/Toggle.svg" class="ml-auto" height=80  routerLink='login'>
+      <img *ngIf='!authenticated' src="assets/Toggle.svg" class="ml-auto" height=60  routerLink='login'>
     </ul>
   </nav>
 </header>
