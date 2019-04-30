@@ -94,8 +94,10 @@ export class ApiMock implements IApiService {
       State: 'GA',
       ZipCode: '30024',
       InActive: false,
-      DOB: '',
-      Email: ''
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
     },
     {
       Id: '2',
@@ -107,8 +109,10 @@ export class ApiMock implements IApiService {
       State: 'NC',
       ZipCode: '28269',
       InActive: false,
-      DOB: '',
-      Email: ''
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
     },
     {
       Id: '1',
@@ -120,8 +124,10 @@ export class ApiMock implements IApiService {
       State: 'GA',
       ZipCode: '30024',
       InActive: false,
-      DOB: '',
-      Email: ''
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
 
     },
     {
@@ -134,35 +140,10 @@ export class ApiMock implements IApiService {
       State: 'NC',
       ZipCode: '28269',
       InActive: false,
-      DOB: '',
-      Email: ''
-
-    },
-    {
-      Id: '1',
-      LastName: 'Raboud',
-      FirstName: 'Robert',
-      AddressLine1: '785 Sentry Ridge Xing',
-      AddressLine2: '',
-      City: 'Suwanee',
-      State: 'GA',
-      ZipCode: '30024',
-      InActive: false,
-      DOB: '',
-      Email: ''
-    },
-    {
-      Id: '2',
-      LastName: 'Balsamo',
-      FirstName: 'Gary',
-      AddressLine1: '10123 Rivendell Ln',
-      AddressLine2: '',
-      City: 'Charlette',
-      State: 'NC',
-      ZipCode: '28269',
-      InActive: false,
-      DOB: '',
-      Email: ''
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
 
     },
     {
@@ -175,9 +156,10 @@ export class ApiMock implements IApiService {
       State: 'GA',
       ZipCode: '30024',
       InActive: false,
-      DOB: '',
-      Email: ''
-
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
     },
     {
       Id: '2',
@@ -189,9 +171,10 @@ export class ApiMock implements IApiService {
       State: 'NC',
       ZipCode: '28269',
       InActive: false,
-      DOB: '',
-      Email: ''
-
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
     },
     {
       Id: '1',
@@ -203,9 +186,10 @@ export class ApiMock implements IApiService {
       State: 'GA',
       ZipCode: '30024',
       InActive: false,
-      DOB: '',
-      Email: ''
-
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
     },
     {
       Id: '2',
@@ -217,9 +201,10 @@ export class ApiMock implements IApiService {
       State: 'NC',
       ZipCode: '28269',
       InActive: false,
-      DOB: '',
-      Email: ''
-
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
     },
     {
       Id: '1',
@@ -231,9 +216,10 @@ export class ApiMock implements IApiService {
       State: 'GA',
       ZipCode: '30024',
       InActive: false,
-      DOB: '',
-      Email: ''
-
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
     },
     {
       Id: '2',
@@ -245,9 +231,10 @@ export class ApiMock implements IApiService {
       State: 'NC',
       ZipCode: '28269',
       InActive: false,
-      DOB: '',
-      Email: ''
-
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
     },
     {
       Id: '1',
@@ -259,9 +246,10 @@ export class ApiMock implements IApiService {
       State: 'GA',
       ZipCode: '30024',
       InActive: false,
-      DOB: '',
-      Email: ''
-
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
     },
     {
       Id: '2',
@@ -273,9 +261,10 @@ export class ApiMock implements IApiService {
       State: 'NC',
       ZipCode: '28269',
       InActive: false,
-      DOB: '',
-      Email: ''
-
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
     },
     {
       Id: '1',
@@ -287,9 +276,10 @@ export class ApiMock implements IApiService {
       State: 'GA',
       ZipCode: '30024',
       InActive: false,
-      DOB: '',
-      Email: ''
-
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
     },
     {
       Id: '2',
@@ -301,9 +291,40 @@ export class ApiMock implements IApiService {
       State: 'NC',
       ZipCode: '28269',
       InActive: false,
-      DOB: '',
-      Email: ''
-
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
+    },
+    {
+      Id: '1',
+      LastName: 'Raboud',
+      FirstName: 'Robert',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
+    },
+    {
+      Id: '2',
+      LastName: 'Balsamo',
+      FirstName: 'Gary',
+      AddressLine1: '10123 Rivendell Ln',
+      AddressLine2: '',
+      City: 'Charlette',
+      State: 'NC',
+      ZipCode: '28269',
+      InActive: false,
+      DOB: 'January 01, 1980',
+      PhoneNumber: '404-991-9375',
+      Gender: 'Male',
+      Email: 'robert@randreng.com'
     }
 
   ];

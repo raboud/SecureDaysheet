@@ -25,9 +25,9 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,7
 }
 
 .secureDaySheet {
-  font-size: 11px;
+  font-size: 14pt;
   line-height: 22px;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 h2 {
@@ -35,14 +35,21 @@ h2 {
 }
 
 .navbar {
-  font-size: 40px;
-  line-height: 50px;
-  font-weight: bolder;
+  font-size: 14pt;
+  line-height: 22px;
+  font-weight: bold;
+  color: $primary;
 
   &-brand {
+    font-size: 30pt;
+    line-height: 50px;
+    font-weight: bolder;
 
     &-title{
-      color: $primary;
+      font-size: 30pt;
+      line-height: 50px;
+      font-weight: bolder;
+          color: $primary;
       border-bottom: 4px solid transparent;
       border-image: linear-gradient(to right, $primary  0%, $primary  80%, $dark 100%);
       border-image-slice: 1;
@@ -60,7 +67,7 @@ h2 {
 
 .btn {
   @extend .secureDaySheet;
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
 
   &:hover {
@@ -106,7 +113,7 @@ input,
   .nav-link,
   .nav-link:hover,
   .nav-link:focus {
-    color: $gray-600;
+    color: $primary;
   }
 
   .nav-link.disabled,
@@ -293,4 +300,39 @@ input,
   border: none;
 
   background-image: "assets/Toggle.png"
+}
+
+.sd-label {
+  @extend .col-12;
+  @extend .secureDaySheet;
+  font-size: 14pt;
+  font-weight: bolder;
+  color: $dark;
+}
+
+.sd-data {
+  @extend .col-12;
+  @extend .secureDaySheet;
+  font-size: 14pt;
+  color: $secondary;
+}
+
+.sd-data-group {
+  @extend .row;
+  @extend .secureDaySheet;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.sd-name{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 20pt;
+  margin-bottom: 15px;
+}
+
+.sd-command-bar {
+  color: $primary;
+  font-size: 14pt;
 }

@@ -7,7 +7,9 @@ export interface IPatient {
   City: string;
   State: string;
   ZipCode: string;
+  PhoneNumber: string;
   InActive: boolean;
   Email: string;
   DOB: string;
+  Gender: string;
 }

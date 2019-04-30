@@ -9,8 +9,8 @@
     </div>
 
     <ul class="navbar-nav ml-auto">
-      <li *ngIf='authenticated' ngbDropdown class="nav-item dropdown text-primary">
-        <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdownLogin" data-toggle="dropdown"
+      <li *ngIf='authenticated' ngbDropdown class="nav-item dropdown">
+        <a ngbDropdownToggle class="nav-link dropdown-toggle text-primary" id="dropdownLogin" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">{{userName}}</a>
         <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownLogin">
           <a class="dropdown-item text-primary" routerLinkActive="active" (click)="logout();isActive = true">Logout</a>

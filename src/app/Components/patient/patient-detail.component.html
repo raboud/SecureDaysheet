@@ -8,15 +8,70 @@
         <div class="col-9">
           <h2>{{pageTitle}}</h2>
         </div>
-        <div class="col-2" (click)='onEdit()'>
+        <div class="col-2" style="text-align: right" (click)='onEdit()'>
           <h2>Edit</h2>
         </div>
       </div>
 
       <img src="assets/Patient_MD.svg" class="img-center" height="98px" />
-      <div style="text-align: center">
+      <div class="sd-name">
         {{item.LastName}}, {{item.FirstName}}
       </div>
+      <div class="row sd-command-bar">
+        <div class="col-3">
+          <div>
+            <img class="img-center" src="assets/Encounter.svg" height="80">
+          </div>
+          <div style="text-align: center;">
+            Encounter
+          </div>
+        </div>
+        <div class="col-3">
+          <div>
+            <img class="img-center" src="assets/Payment.svg" height="80">
+          </div>
+          <div style="text-align: center;">
+            Payment
+          </div>
+        </div>
+        <div class="col-3">
+          <div>
+            <img class="img-center" src="assets/Note.svg" height="80">
+          </div>
+          <div style="text-align: center;">
+            Notes
+          </div>
+        </div>
+        <div class="col-3">
+          <div>
+            <img class="img-center" src="assets/Upload.svg" height="80">
+          </div>
+          <div style="text-align: center;">
+            Upload
+          </div>
+        </div>
+      </div>
+      <div class="sd-data-group">
+        <div class="sd-label">Address</div>
+        <div class="sd-data">{{item.AddressLine1}}</div>
+        <div class="sd-data">{{item.City}}, {{item.State}} {{item.ZipCode}}</div>
+      </div>
+      <div class="sd-data-group">
+          <div class="sd-label">Phone</div>
+          <div class="sd-data">{{item.PhoneNumber}}</div>
+      </div>
+      <div class="sd-data-group">
+          <div class="sd-label">Email</div>
+          <div class="sd-data">{{item.Email}}</div>
+        </div>
+      <div class="sd-data-group">
+          <div class="sd-label">DOB</div>
+          <div class="sd-data">{{item.DOB}}</div>
+        </div>
+      <div class="sd-data-group">
+          <div class="sd-label">Gender</div>
+          <div class="sd-data">{{item.Gender}}</div>
+        </div>
     </div>
   </div>
 </div>

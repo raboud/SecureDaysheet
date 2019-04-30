@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<svg width="700" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+ <g class="layer">
+  <title>Layer 1</title>
+  <circle cx="338.5" cy="299.5" fill="#2ea3f2" id="svg_3" r="296.811388" stroke="#2ea3f2" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="12"/>
+  <line fill="none" id="svg_4" stroke="#ffffff" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="12" x1="119.5" x2="551.49999" y1="124.5" y2="123.5"/>
+  <line fill="none" id="svg_5" stroke="#ffffff" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="12" x1="119.5" x2="551.49999" y1="476" y2="475"/>
+  <line fill="none" id="svg_6" stroke="#2ea3f2" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" x1="123.5" x2="547.5" y1="474.5" y2="122.5"/>
+  <line fill="none" id="svg_7" stroke="#ffffff" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="12" x1="546.5" x2="119.5" y1="123.5" y2="477.5"/>
+  <line fill="none" id="svg_8" stroke="#ffffff" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="12" x1="316" x2="316" y1="316.000001" y2="348.499999"/>
+  <line fill="none" id="svg_9" stroke="#2ea3f2" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" x1="319.5" x2="272.5" y1="314.5" y2="315.5"/>
+  <line fill="none" id="svg_10" stroke="#ffffff" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="12" transform="rotate(-1.82703 298.269 314.856)" x1="321.36126" x2="275.17739" y1="315.327681" y2="314.384001"/>
+  <line fill="none" id="svg_11" stroke="#ffffff" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="12" x1="351.5" x2="393.500001" y1="284.5" y2="284.5"/>
+  <line fill="none" id="svg_12" stroke="#ffffff" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="12" transform="rotate(2.24574 352.402 262.996)" x1="351.480483" x2="353.32374" y1="240.499614" y2="285.492705"/>
+ </g>
+</svg>
