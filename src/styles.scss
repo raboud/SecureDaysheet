@@ -1,7 +1,7 @@
 @import "./variables";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// Sandstone 4.3.1
+// SecureDaySheet 4.3.1
 // Bootswatch
 
 
@@ -24,10 +24,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,7
   background-color: $gray-200 !important;
 }
 
-.sandstone {
-  font-size: 40px;
-  line-height: 50px;
-  font-weight: bolder;
+.secureDaySheet {
+  font-size: 11px;
+  line-height: 22px;
+  font-weight: 500;
 }
 
 h2 {
@@ -35,11 +35,13 @@ h2 {
 }
 
 .navbar {
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: bolder;
+
   &-brand {
-    @extend .sandstone;
 
     &-title{
-      @extend .sandstone;
       color: $primary;
       border-bottom: 4px solid transparent;
       border-image: linear-gradient(to right, $primary  0%, $primary  80%, $dark 100%);
@@ -48,8 +50,7 @@ h2 {
 
   }
   .nav-link {
-    @extend .sandstone;
-  }
+    }
 
   &-form input,
   &-form .form-control {
@@ -60,7 +61,7 @@ h2 {
 // Buttons =====================================================================
 
 .btn {
-  @extend .sandstone;
+  @extend .secureDaySheet;
   font-size: 10px;
   text-transform: uppercase;
 
@@ -99,7 +100,7 @@ input,
 
 .nav-tabs {
   .nav-link {
-    @extend .sandstone;
+    @extend .secureDaySheet;
     background-color: $gray-200;
     border-color: $gray-300;
   }
@@ -121,7 +122,7 @@ input,
 
 .nav-pills {
   .nav-link {
-    @extend .sandstone;
+    @extend .secureDaySheet;
     border: 1px solid transparent;
     color: $gray-600;
   }
@@ -143,12 +144,12 @@ input,
 
 
 .breadcrumb {
-  @extend .sandstone;
+  @extend .secureDaySheet;
   border: 1px solid $gray-300;
 }
 
 .pagination {
-  @extend .sandstone;
+  @extend .secureDaySheet;
 
   a:hover {
     text-decoration: none;
@@ -157,7 +158,7 @@ input,
 
 .dropdown-menu {
   .dropdown-item {
-    @extend .sandstone;
+    @extend .secureDaySheet;
   }
 }
 
@@ -238,7 +239,7 @@ input,
 }
 
 .tooltip {
-  @extend .sandstone;
+  @extend .secureDaySheet;
 }
 
 .close {
@@ -255,10 +256,9 @@ input,
 // Containers ==================================================================
 .sd-container {
   @extend .container;
-  @extend .col-6;
-  @extend .offset-3;
-  min-height: 65vh;
-
+  @extend .col-8;
+  @extend .offset-2;
+  min-height: 87vh;
 }
 
 .img-center {
@@ -271,9 +271,14 @@ input,
   background-color: $light;
   height: 80;
   margin-bottom: 10px;
+
   &-input{
-    display: flex;
+      display: flex;
     align-items: center;
   }
 }
 
+.sd-card {
+  @extend .card;
+  border: none;
+}

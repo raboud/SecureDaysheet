@@ -4,7 +4,8 @@ import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
 import { ConfigurationService } from './configuration.service';
-import { IPatient, IPage } from '../models';
+import { IPatient, IProvider, IPage } from '../models';
+import { Provider } from '@angular/core/src/render3/jit/compiler_facade_interface';
 
 export interface IApiService {
   load(): Observable<boolean>;
@@ -21,6 +22,7 @@ export interface IApiService {
 })
 export class ApiService implements IApiService {
   private patientUrl = '';
+  private providerUrl = '';
 
   constructor(
     private http: HttpClient,
@@ -32,6 +34,7 @@ export class ApiService implements IApiService {
     return this.config.load().pipe(
       map(() => {
         this.patientUrl = this.config.serverSettings.apiUrl + '/api/v1/patients';
+        this.providerUrl = this.config.serverSettings.apiUrl + '/api/v1/providers';
         return true;
       })
     );
@@ -54,6 +57,23 @@ export class ApiService implements IApiService {
     return this.http.get<IPatient>(url);
   }
 
+  getProviderPage(
+    pageIndex: number,
+    pageSize: number,
+    search?: string
+  ): Observable<IPage<Provider>> {
+    let url = this.patientUrl;
+    url = url + '?pageIndex=' + pageIndex + '&pageSize=' + pageSize;
+
+    return this.http.get<IPage<Provider>>(url + '/page');
+  }
+
+  getProvider(id: string): Observable<IProvider> {
+    const url = this.patientUrl + '/id';
+
+    return this.http.get<IProvider>(url);
+  }
+
 }
 
 
@@ -63,7 +83,7 @@ export class ApiService implements IApiService {
 export class ApiMock implements IApiService {
   private patientUrl = '';
 
-  items: IPatient[] = [
+  patients: IPatient[] = [
     {
       Id: '1',
       LastName: 'Raboud',
@@ -73,7 +93,9 @@ export class ApiMock implements IApiService {
       City: 'Suwanee',
       State: 'GA',
       ZipCode: '30024',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
     },
     {
       Id: '2',
@@ -84,7 +106,9 @@ export class ApiMock implements IApiService {
       City: 'Charlette',
       State: 'NC',
       ZipCode: '28269',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
     },
     {
       Id: '1',
@@ -95,7 +119,10 @@ export class ApiMock implements IApiService {
       City: 'Suwanee',
       State: 'GA',
       ZipCode: '30024',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
+
     },
     {
       Id: '2',
@@ -106,7 +133,10 @@ export class ApiMock implements IApiService {
       City: 'Charlette',
       State: 'NC',
       ZipCode: '28269',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
+
     },
     {
       Id: '1',
@@ -117,7 +147,9 @@ export class ApiMock implements IApiService {
       City: 'Suwanee',
       State: 'GA',
       ZipCode: '30024',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
     },
     {
       Id: '2',
@@ -128,7 +160,10 @@ export class ApiMock implements IApiService {
       City: 'Charlette',
       State: 'NC',
       ZipCode: '28269',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
+
     },
     {
       Id: '1',
@@ -139,7 +174,10 @@ export class ApiMock implements IApiService {
       City: 'Suwanee',
       State: 'GA',
       ZipCode: '30024',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
+
     },
     {
       Id: '2',
@@ -150,7 +188,10 @@ export class ApiMock implements IApiService {
       City: 'Charlette',
       State: 'NC',
       ZipCode: '28269',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
+
     },
     {
       Id: '1',
@@ -161,7 +202,10 @@ export class ApiMock implements IApiService {
       City: 'Suwanee',
       State: 'GA',
       ZipCode: '30024',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
+
     },
     {
       Id: '2',
@@ -172,7 +216,10 @@ export class ApiMock implements IApiService {
       City: 'Charlette',
       State: 'NC',
       ZipCode: '28269',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
+
     },
     {
       Id: '1',
@@ -183,7 +230,10 @@ export class ApiMock implements IApiService {
       City: 'Suwanee',
       State: 'GA',
       ZipCode: '30024',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
+
     },
     {
       Id: '2',
@@ -194,7 +244,10 @@ export class ApiMock implements IApiService {
       City: 'Charlette',
       State: 'NC',
       ZipCode: '28269',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
+
     },
     {
       Id: '1',
@@ -205,7 +258,10 @@ export class ApiMock implements IApiService {
       City: 'Suwanee',
       State: 'GA',
       ZipCode: '30024',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
+
     },
     {
       Id: '2',
@@ -216,7 +272,10 @@ export class ApiMock implements IApiService {
       City: 'Charlette',
       State: 'NC',
       ZipCode: '28269',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
+
     },
     {
       Id: '1',
@@ -227,7 +286,10 @@ export class ApiMock implements IApiService {
       City: 'Suwanee',
       State: 'GA',
       ZipCode: '30024',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
+
     },
     {
       Id: '2',
@@ -238,7 +300,174 @@ export class ApiMock implements IApiService {
       City: 'Charlette',
       State: 'NC',
       ZipCode: '28269',
-      InActive: false
+      InActive: false,
+      DOB: '',
+      Email: ''
+
+    }
+
+  ];
+
+  provider: IProvider[] = [
+    {
+      Id: '1',
+      Name: 'Provider 1',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+    },
+    {
+      Id: '2',
+      Name: 'Provider 2',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+    },
+    {
+      Id: '3',
+      Name: 'Provider 3',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+    },
+    {
+      Id: '4',
+      Name: 'Provider 4',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+    },
+    {
+      Id: '5',
+      Name: 'Provider 5',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+    },
+    {
+      Id: '6',
+      Name: 'Provider 6',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+    },
+    {
+      Id: '7',
+      Name: 'Provider 7',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+    },
+    {
+      Id: '8',
+      Name: 'Provider 8',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+    },
+    {
+      Id: '9',
+      Name: 'Provider 9',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+    },
+    {
+      Id: '10',
+      Name: 'Provider 10',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+    },
+    {
+      Id: '11',
+      Name: 'Provider 11',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+    },
+    {
+      Id: '12',
+      Name: 'Provider 12',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+    },
+    {
+      Id: '3',
+      Name: 'Provider 13',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+    },
+    {
+      Id: '14',
+      Name: 'Provider 14',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+    },
+    {
+      Id: '15',
+      Name: 'Provider 15',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
+    },
+    {
+      Id: '16',
+      Name: 'Provider 16',
+      AddressLine1: '785 Sentry Ridge Xing',
+      AddressLine2: '',
+      City: 'Suwanee',
+      State: 'GA',
+      ZipCode: '30024',
+      InActive: false,
     }
 
   ];
@@ -259,7 +488,7 @@ export class ApiMock implements IApiService {
     search?: string
   ): Observable<IPage<IPatient>> {
     const page: IPage<IPatient> = {
-      Count: this.items.length,
+      Count: this.patients.length,
       PageIndex: pageIndex,
       PageSize: pageSize,
       Data: [],
@@ -268,16 +497,43 @@ export class ApiMock implements IApiService {
     console.log(start);
     let end = (pageIndex  + 1)* pageSize;
     console.log(end);
-    page.Data = this.items.slice(start, end);
+    page.Data = this.patients.slice(start, end);
     console.log(page);
     return of(page);
   }
 
   getPatient(id: string): Observable<IPatient> {
     console.log(id);
-    console.log(this.items);
-    console.log(this.items.find(i => i.Id === id));
-    return of(this.items.find(i => i.Id === id));
+    console.log(this.patients);
+    console.log(this.patients.find(i => i.Id === id));
+    return of(this.patients.find(i => i.Id === id));
+  }
+
+  getProviderPage(
+    pageIndex: number,
+    pageSize: number,
+    search?: string
+  ): Observable<IPage<IProvider>> {
+    const page: IPage<IProvider> = {
+      Count: this.patients.length,
+      PageIndex: pageIndex,
+      PageSize: pageSize,
+      Data: [],
+    };
+    let start = (pageIndex ) * pageSize;
+    console.log(start);
+    let end = (pageIndex  + 1)* pageSize;
+    console.log(end);
+    page.Data = this.provider.slice(start, end);
+    console.log(page);
+    return of(page);
+  }
+
+  getProvider(id: string): Observable<IProvider> {
+    console.log(id);
+    console.log(this.provider);
+    console.log(this.provider.find(i => i.Id === id));
+    return of(this.provider.find(i => i.Id === id));
   }
 
 }

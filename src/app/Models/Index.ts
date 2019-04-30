@@ -13,5 +13,6 @@ export * from './configuration.model';
 // export * from './pager.model';
 export * from './pagination.model';
 export * from './patient.model';
+export * from './provider.model';
 // export * from './unit.model';
 // export * from './vendor.model';

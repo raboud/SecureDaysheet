@@ -1,13 +1,10 @@
-export interface IPatient {
+export interface IProvider {
   Id: string;
-  FirstName: string;
-  LastName: string;
+  Name: string;
   AddressLine1: string;
   AddressLine2: string;
   City: string;
   State: string;
   ZipCode: string;
   InActive: boolean;
-  Email: string;
-  DOB: string;
 }

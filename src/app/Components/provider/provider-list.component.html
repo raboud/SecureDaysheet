@@ -1,3 +1,42 @@
-<p>
-  provider-list works!
-</p>
+<div class="sd-card sd-container">
+    <div class="card-body">
+      <div class="row card-title">
+        <div class="col-1" (click)='onBack()'>
+          <h2>&lt;</h2>
+        </div>
+        <div class="col-10">
+          <h2>{{pageTitle}}</h2>
+        </div>
+        <div class="col-1" (click)='onAdd()'>
+          <h2>+</h2>
+        </div>
+      </div>
+      <div class="row search">
+        <div class="col-1" (click)="onSearch()">
+          <img src="../../../assets/Search_SM.svg">
+        </div>
+        <div class="col-10 search-input">
+          <input placeholder="Search" type="text" class="form-control" style='border-left-width: 0;' >
+        </div>
+      </div>
+      <table class="table table-hover table-striped" style='text-align:left;'>
+        <tbody>
+          <tr class='row' *ngFor='let item of items.Data'>
+            <td class="col-1">
+              <img src="../../../assets/Provider - Single_SM.svg" height=40px>
+            </td>
+            <td class="col-10">{{item.Name}}</td>
+            <td class="col-1">
+              <h2 (click)='onDetail(item)' tabindex="1">&gt;</h2>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class='row'>
+      <ngb-pagination class='col-9' [collectionSize]="items.Count" [pageSize]='items.PageSize' [(page)]="page"
+        [maxSize]="5" [rotate]="true" [ellipses]="false" (pageChange)='onPageChange()' [boundaryLinks]="true">
+      </ngb-pagination>
+    </div>
+    <br />
+  </div>
