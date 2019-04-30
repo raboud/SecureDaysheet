@@ -25,7 +25,7 @@ import { ReportDetailsComponent } from './Components/report/report-details.compo
 import { SettingListComponent } from './Components/setting/setting-list.component';
 import { SettingDetailsComponent } from './Components/setting/setting-details.component';
 
-import { AuthService } from './Services/auth.service';
+import { AuthService, AuthMockService } from './Services/auth.service';
 import { ApiService, ApiMock } from './Services/api.service';
 import { ConfigurationService } from './Services/configuration.service';
 import { StorageService } from './Services/storage.service';
@@ -62,7 +62,7 @@ import { HomeComponent } from './Components/home/home.component';
     RouterModule
   ],
   providers: [
-    AuthService,
+    { provide: AuthService, useClass: AuthMockService},
     { provide: ApiService, useClass: ApiMock},
     ConfigurationService,
     StorageService,

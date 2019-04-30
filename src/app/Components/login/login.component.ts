@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.auth.authentication$.subscribe(ret => {
     if (ret === true) {
-      this.router.navigate(['home']);
+      this.router.navigate(['dashboard']);
     }});
 
     this.form = this.fb.group({
@@ -86,7 +86,8 @@ export class LoginComponent implements OnInit, AfterViewInit {
 // tslint:disable-next-line: no-string-literal
     const password = this.form.controls['password'].value;
 
-//    this.auth.Signin(userName, password);
+    console.log('onLogin');
+    this.auth.Signin(userName, password);
   }
 
 }

@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
     this.subscription = this.service.authentication$.subscribe(res => {
       this.authenticated = res;
       this.isAdmin = this.service.IsAdmin;
-      this.userName = this.service.UserData ? this.service.UserData.email : '';
+      this.userName = this.service.UserData ? this.service.UserData.Name : '';
     });
 
     if (window.location.hash) {
@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit {
     if (this.authenticated) {
         this.isAdmin = this.service.IsAdmin;
         if (this.service.UserData) {
-              this.userName = this.service.UserData.email;
+              this.userName = this.service.UserData.Name;
           }
       }
     }

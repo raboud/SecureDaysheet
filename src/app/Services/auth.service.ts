@@ -269,3 +269,107 @@ export class AuthService {
     // }
   }
 }
+
+
+
+@Injectable()
+export class AuthMockService {
+  public UserData: any;
+  private urlHeaders = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
+
+  private actionUrl: string;
+  private headers: HttpHeaders;
+  private authenticationSource = new Subject<boolean>();
+  authentication$ = this.authenticationSource.asObservable();
+  private authorityUrl = '';
+  private token = '';
+
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private route: ActivatedRoute,
+    private configurationService: ConfigurationService,
+    private storage: StorageService
+  ) {
+    this.headers = new HttpHeaders();
+    this.headers.append('Content-Type', 'application/json');
+    this.headers.append('Accept', 'application/json');
+
+    this.configurationService.load().subscribe(x => {
+      this.authorityUrl = this.configurationService.serverSettings.identityUrl;
+      this.storage.store('IdentityUrl', this.authorityUrl);
+    });
+
+    if (this.storage.retrieve('IsAuthorized') !== '') {
+      this.IsAuthorized = this.storage.retrieve('IsAuthorized');
+      this.token = this.storage.retrieve('authorizationData');
+      this.UserData = this.storage.retrieve('userData');
+      if (this.UserData) {
+        if (this.UserData.role === 'admin') {
+          this.IsAdmin = true;
+        }
+      }
+      this.authenticationSource.next(this.IsAuthorized);
+    }
+
+  }
+
+  public IsAuthorized = false;
+  public IsAdmin = false;
+
+  public getAuthorizationHeader(): string {
+    return 'Bearer ' + this.GetToken();
+  }
+
+  public GetToken(): any {
+    return this.token;
+  }
+
+  private ResetAuthorizationData() {
+    this.token = '';
+    this.storage.store('authorizationData', '');
+    this.storage.store('authorizationDataIdToken', '');
+
+    this.IsAuthorized = false;
+    this.IsAdmin = false;
+    this.storage.store('IsAuthorized', false);
+    this.authenticationSource.next(false);
+  }
+
+  private SetAuthorizationData() {
+    this.IsAuthorized = true;
+    this.UserData = {};
+    this.UserData.Name = 'DiMaio, Michael';
+    this.storage.store('userData', this.UserData);
+    // emit observable
+    this.storage.store('IsAuthorized', true);
+
+    this.authenticationSource.next(true);
+  }
+
+  public Signin(userName: string, password: string) {
+    this.ResetAuthorizationData();
+    console.log('Signin');
+    if (userName === 'robert@randreng.com' && password === 'test12345') {
+      console.log('Match');
+      this.SetAuthorizationData();
+    }
+  }
+
+  public Authorize() {
+    this.ResetAuthorizationData();
+  }
+
+  public AuthorizedCallback() {
+    this.SetAuthorizationData();
+  }
+
+  public Signoff() {
+    this.ResetAuthorizationData();
+  }
+
+  public Logoff() {
+    this.ResetAuthorizationData();
+  }
+
+}

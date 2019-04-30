@@ -280,3 +280,17 @@ input,
   @extend .card;
   border: none;
 }
+
+.toggler {
+  display: inline-block;
+//  width: 1.5em;
+  height: 30px;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+  background-color: $dark;
+  border: none;
+
+  background-image: "assets/Toggle.png"
+}
