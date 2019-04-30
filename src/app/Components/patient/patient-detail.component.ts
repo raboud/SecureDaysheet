@@ -22,7 +22,7 @@ export class PatientDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      const id = params['id']; // (+) converts string 'id' to a number
+      const id = params.id; // (+) converts string 'id' to a number
       this.getItem(id);
     });
   }

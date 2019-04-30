@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-daysheet',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./daysheet.component.scss']
 })
 export class DaysheetComponent implements OnInit {
+  pageTitle = 'Daysheet';
 
-  constructor() { }
+  constructor(
+    private location: Location
+  ) { }
 
   ngOnInit() {
+  }
+
+  onBack() {
+    this.location.back();
   }
 
 }

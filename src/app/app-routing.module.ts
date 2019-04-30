@@ -14,8 +14,10 @@ import { ReportListComponent } from './Components/report/report-list.component';
 import { ReportDetailsComponent } from './Components/report/report-details.component';
 import { SettingListComponent } from './Components/setting/setting-list.component';
 import { SettingDetailsComponent } from './Components/setting/setting-details.component';
+import { HomeComponent } from './Components/home/home.component';
 
 const routes: Routes = [
+  { path: 'home', component: HomeComponent},
   { path: 'dashboard', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
   { path: 'patients', component: PatientListComponent },
@@ -29,8 +31,8 @@ const routes: Routes = [
   { path: 'reports/:id', component: ReportDetailsComponent },
   { path: 'settings', component: SettingListComponent },
   { path: 'settings/:id', component: SettingDetailsComponent },
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: '**', redirectTo: 'login', pathMatch: 'full' }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({

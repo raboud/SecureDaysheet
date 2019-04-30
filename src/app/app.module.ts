@@ -29,6 +29,7 @@ import { AuthService } from './Services/auth.service';
 import { ApiService, ApiMock } from './Services/api.service';
 import { ConfigurationService } from './Services/configuration.service';
 import { StorageService } from './Services/storage.service';
+import { HomeComponent } from './Components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { StorageService } from './Services/storage.service';
     ReportDetailsComponent,
     SettingListComponent,
     SettingDetailsComponent,
-    DaysheetComponent
+    DaysheetComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

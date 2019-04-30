@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-report-list',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./report-list.component.scss']
 })
 export class ReportListComponent implements OnInit {
+  pageTitle = 'Reports';
 
-  constructor() { }
+  constructor(
+    private location: Location
+  ) { }
 
   ngOnInit() {
   }
 
+  onBack() {
+    this.location.back();
+  }
 }
