@@ -4,12 +4,14 @@
 // SecureDaySheet 4.3.1
 // Bootswatch
 
-
 // Variables ===================================================================
 
 $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" !default;
 @import url($web-font-path);
 
+body,html {
+  height: 100%;
+}
 // Navbar ======================================================================
 
 .bg-primary {
@@ -35,7 +37,7 @@ body {
 }
 
 h2 {
-  color: $primary
+  color: $primary;
 }
 
 .navigation {
@@ -49,20 +51,24 @@ h2 {
   color: $primary;
 
   &-brand {
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
     font-weight: bolder;
 
-    &-title{
-      font-size: 2rem;
-      line-height: 3rem;
+    &-title {
+      font-size: 1.75rem;
+      line-height: 2.5rem;
       font-weight: bolder;
-          color: $primary;
+      color: $primary;
       border-bottom: 4px solid transparent;
-      border-image: linear-gradient(to right, $primary  0%, $primary  80%, $dark 100%);
+      border-image: linear-gradient(
+        to right,
+        $primary 0%,
+        $primary 80%,
+        $dark 100%
+      );
       border-image-slice: 1;
-      }
-
+    }
   }
 
   &-form input,
@@ -115,8 +121,9 @@ input,
   }
 }
 
-.table td, .table th {
-  padding: .25rem;
+.table td,
+.table th {
+  padding: 0.25rem;
 }
 // Navs ========================================================================
 
@@ -164,7 +171,6 @@ input,
   }
 }
 
-
 .breadcrumb {
   @extend .secureDaySheet;
   border: 1px solid $gray-300;
@@ -196,49 +202,65 @@ input,
   }
 
   &-primary {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $primary;
     }
   }
 
   &-secondary {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $secondary;
     }
   }
 
   &-success {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $success;
     }
   }
 
   &-info {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $info;
     }
   }
 
   &-danger {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $danger;
     }
   }
 
   &-warning {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $warning;
     }
   }
 
   &-dark {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $dark;
     }
   }
 
   &-light {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $light;
     }
   }
@@ -253,7 +275,6 @@ input,
 }
 
 .badge {
-
   &-success,
   &-warning {
     color: $white;
@@ -290,19 +311,19 @@ input,
   margin-left: auto;
 }
 
-.command-img{
+.command-img {
   @extend .img-center;
   height: 3em;
 }
 
-.list-img{
+.list-img {
   @extend .img-center;
   text-align: center;
-  vertical-align:middle;
+  vertical-align: middle;
   height: 2.5em;
 }
 
-.card-img{
+.card-img {
   @extend .img-center;
   height: 7em;
 }
@@ -312,8 +333,8 @@ input,
   height: 2.5rem;
   margin-bottom: 1rem;
 
-  &-input{
-      display: flex;
+  &-input {
+    display: flex;
     align-items: center;
   }
 }
@@ -325,7 +346,7 @@ input,
 
 .toggler {
   display: inline-block;
-  height: 2.0rem;
+  height: 2rem;
   vertical-align: middle;
   content: "";
   background: no-repeat center center;
@@ -356,7 +377,7 @@ input,
   margin-bottom: 1rem;
 }
 
-.sd-name{
+.sd-name {
   text-align: center;
   text-transform: uppercase;
   font-weight: bolder;

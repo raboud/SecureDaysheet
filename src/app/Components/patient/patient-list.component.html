@@ -21,7 +21,7 @@
     </div>
     <table class="table table-hover table-striped" style='text-align:left;'>
       <tbody>
-        <tr class='row' *ngFor='let item of items.Data'>
+        <tr class='row' *ngFor='let item of items.Data' (click)='onDetail(item)'>
           <td class="col-1">
             <img src="assets/Patient_SM.svg" class="list-img" height="30px">
           </td>
@@ -36,7 +36,7 @@
             </div>
           </td>
           <td class="col-1">
-            <div class="navigation" (click)='onDetail(item)' tabindex="1">&gt;</div>
+            <div class="navigation" tabindex="1">&gt;</div>
           </td>
         </tr>
       </tbody>
