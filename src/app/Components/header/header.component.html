@@ -16,7 +16,7 @@
           <a class="dropdown-item text-primary" routerLinkActive="active" (click)="logout();isActive = true">Logout</a>
         </div>
       </li>
-      <img *ngIf='!authenticated' src="assets/Toggle.svg" class="ml-auto" height=60  routerLink='login'>
+      <img *ngIf='!authenticated' src="assets/Toggle.svg" class="ml-auto toggler" routerLink='login'>
     </ul>
   </nav>
 </header>

@@ -23,11 +23,11 @@
         <tbody>
           <tr class='row' *ngFor='let item of items.Data'>
             <td class="col-1">
-              <img src="assets/Provider - Single_SM.svg" height=40px>
+              <img src="assets/Provider - Single_SM.svg" class="list-img" height=30px>
             </td>
-            <td class="col-10">{{item.Name}}</td>
+            <td class="col-10" style="vertical-align: middle;">{{item.Name}}</td>
             <td class="col-1">
-              <h2 (click)='onDetail(item)' tabindex="1">&gt;</h2>
+              <div class="navigation" (click)='onDetail(item)' tabindex="1">&gt;</div>
             </td>
           </tr>
         </tbody>

@@ -1,20 +1,20 @@
 <div class="sd-card sd-container">
-    <div class="card-body">
-        <div class="row card-title">
-            <div class="col-1" (click)='onBack()'>
-              <h2>&lt;</h2>
-            </div>
-            <div class="col-9">
-              <h2>{{pageTitle}}</h2>
-            </div>
-            <div class="col-2" (click)='onEdit()'>
-                <h2>Edit</h2>
-              </div>
-            </div>
-
-      <img src="assets/Provider - Single_MD.svg" class="img-center" height="98px"/>
-      <div class="sd-name">
-        {{item.Name}}
+  <div class="card-body">
+    <div class="row card-title">
+      <div class="col-1" (click)='onBack()'>
+        <h2>&lt;</h2>
+      </div>
+      <div class="col-9">
+        <h2>{{pageTitle}}</h2>
+      </div>
+      <div class="col-2" (click)='onEdit()'>
+        <h2>Edit</h2>
       </div>
     </div>
+
+    <img src="assets/Provider - Single_MD.svg" class="img-center" />
+    <div class="sd-name">
+      {{item.Name}}
+    </div>
   </div>
+</div>

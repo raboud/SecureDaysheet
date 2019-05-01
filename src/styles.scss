@@ -25,29 +25,37 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,7
 }
 
 .secureDaySheet {
-  font-size: 14pt;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: bold;
+}
+
+body {
+  font-size: 62.5%;
 }
 
 h2 {
   color: $primary
 }
 
+.navigation {
+  font-size: 1.5rem;
+  color: $primary;
+  text-align: center;
+}
+
 .navbar {
-  font-size: 14pt;
-  line-height: 22px;
-  font-weight: bold;
+  @extend .secureDaySheet;
   color: $primary;
 
   &-brand {
-    font-size: 30pt;
-    line-height: 50px;
+    font-size: 2rem;
+    line-height: 3rem;
     font-weight: bolder;
 
     &-title{
-      font-size: 30pt;
-      line-height: 50px;
+      font-size: 2rem;
+      line-height: 3rem;
       font-weight: bolder;
           color: $primary;
       border-bottom: 4px solid transparent;
@@ -67,7 +75,7 @@ h2 {
 
 .btn {
   @extend .secureDaySheet;
-  font-size: 12px;
+  font-size: 1rem;
   text-transform: uppercase;
 
   &:hover {
@@ -107,6 +115,9 @@ input,
   }
 }
 
+.table td, .table th {
+  padding: .25rem;
+}
 // Navs ========================================================================
 
 .nav-tabs {
@@ -274,14 +285,31 @@ input,
 
 .img-center {
   display: block;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+}
+
+.command-img{
+  @extend .img-center;
+  height: 3em;
+}
+
+.list-img{
+  @extend .img-center;
+  text-align: center;
+  vertical-align:middle;
+  height: 2.5em;
+}
+
+.card-img{
+  @extend .img-center;
+  height: 7em;
 }
 
 .search {
   background-color: $light;
-  height: 80;
-  margin-bottom: 10px;
+  height: 2.5rem;
+  margin-bottom: 1rem;
 
   &-input{
       display: flex;
@@ -296,22 +324,19 @@ input,
 
 .toggler {
   display: inline-block;
-//  width: 1.5em;
-  height: 30px;
+  height: 2.0rem;
   vertical-align: middle;
   content: "";
   background: no-repeat center center;
   background-size: 100% 100%;
   background-color: $dark;
   border: none;
-
-  background-image: "assets/Toggle.png"
 }
 
 .sd-label {
   @extend .col-12;
   @extend .secureDaySheet;
-  font-size: 14pt;
+  font-size: 1rem;
   font-weight: bolder;
   color: $dark;
 }
@@ -319,26 +344,26 @@ input,
 .sd-data {
   @extend .col-12;
   @extend .secureDaySheet;
-  font-size: 14pt;
+  font-size: 1rem;
   color: $secondary;
 }
 
 .sd-data-group {
   @extend .row;
   @extend .secureDaySheet;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .sd-name{
   text-align: center;
   text-transform: uppercase;
   font-weight: bolder;
-  font-size: 20pt;
-  margin-bottom: 15px;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .sd-command-bar {
   color: $primary;
-  font-size: 14pt;
+  font-size: 1rem;
 }
