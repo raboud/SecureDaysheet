@@ -15,24 +15,28 @@ import { ReportDetailsComponent } from './Components/report/report-details.compo
 import { SettingListComponent } from './Components/setting/setting-list.component';
 import { SettingDetailsComponent } from './Components/setting/setting-details.component';
 import { HomeComponent } from './Components/home/home.component';
+import { AuthGuard } from './Services/auth.guard';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent},
-  { path: 'dashboard', component: DashboardComponent },
+  {
+    path: '', canActivate:[AuthGuard], children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'patients', component: PatientListComponent },
+      { path: 'patients/:id', component: PatientDetailComponent },
+      { path: 'providers', component: ProviderListComponent },
+      { path: 'providers/:id', component: ProviderDetailComponent },
+      { path: 'daysheet', component: DaysheetComponent },
+      { path: 'messages', component: MessageListComponent },
+      { path: 'messages/:id', component: MessageDetailComponent },
+      { path: 'reports', component: ReportListComponent },
+      { path: 'reports/:id', component: ReportDetailsComponent },
+      { path: 'settings', component: SettingListComponent },
+      { path: 'settings/:id', component: SettingDetailsComponent }
+    ]
+  },
   { path: 'login', component: LoginComponent },
-  { path: 'patients', component: PatientListComponent },
-  { path: 'patients/:id', component: PatientDetailComponent },
-  { path: 'providers', component: ProviderListComponent },
-  { path: 'providers/:id', component: ProviderDetailComponent },
-  { path: 'daysheet', component: DaysheetComponent },
-  { path: 'messages', component: MessageListComponent },
-  { path: 'messages/:id', component: MessageDetailComponent },
-  { path: 'reports', component: ReportListComponent },
-  { path: 'reports/:id', component: ReportDetailsComponent },
-  { path: 'settings', component: SettingListComponent },
-  { path: 'settings/:id', component: SettingDetailsComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', redirectTo: 'home', pathMatch: 'full' }
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '**', redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({

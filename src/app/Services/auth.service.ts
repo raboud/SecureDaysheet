@@ -211,10 +211,10 @@ export class AuthService {
   private HandleError(error: HttpErrorResponse) {
     console.log(error);
     if (error.status === 403) {
-      this.router.navigate(['/Forbidden']);
+      this.router.navigate(['Forbidden']);
     } else if (error.status === 401) {
       // this.ResetAuthorizationData();
-      this.router.navigate(['/Unauthorized']);
+      this.router.navigate(['Unauthorized']);
     }
   }
 
@@ -366,10 +366,12 @@ export class AuthMockService {
 
   public Signoff() {
     this.ResetAuthorizationData();
+    this.router.navigate(['login']);
   }
 
   public Logoff() {
     this.ResetAuthorizationData();
+    this.router.navigate(['login']);
   }
 
 }

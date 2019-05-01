@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { AuthService } from 'src/app/Services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +17,9 @@ export class HeaderComponent implements OnInit {
   public userName = '';
   badge = 0;
 
-  constructor(private service: AuthService) { }
+  constructor(
+    private router: Router,
+    private service: AuthService) { }
 
   ngOnInit() {
     this.subscription = this.service.authentication$.subscribe(res => {
@@ -45,6 +48,7 @@ export class HeaderComponent implements OnInit {
 
     logout() {
       this.service.Signoff();
+
     }
 
     login() {
