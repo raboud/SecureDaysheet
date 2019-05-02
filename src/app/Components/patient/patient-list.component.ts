@@ -13,7 +13,7 @@ import { AuthService } from 'src/app/Services/auth.service';
   styleUrls: ['./patient-list.component.scss']
 })
 export class PatientListComponent implements OnInit {
-  pageTitle = 'Patients';
+  pageTitle = 'Dashboard';
   items: IPage<IPatient> = {
     Count: 0,
     PageIndex: 0,

@@ -7,7 +7,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./setting-list.component.scss']
 })
 export class SettingListComponent implements OnInit {
-  pageTitle = 'Settings';
+  parent = 'Dashboard';
 
   constructor(
     private location: Location

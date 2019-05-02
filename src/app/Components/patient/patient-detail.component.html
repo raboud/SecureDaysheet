@@ -1,17 +1,7 @@
 <div class="sd-container">
   <div class="sd-card">
     <div class="card-body">
-        <div class="row card-title">
-            <div class="col-1" (click)='onBack()'>
-              <div class="navigation">&lt;</div>
-            </div>
-            <div class="col-8">
-              <div class="pagetitle" >{{pageTitle}}</div>
-            </div>
-            <div class="col-3" (click)='onEdit()'>
-                <div class="navigation">Edit</div>
-            </div>
-          </div>
+      <app-navigation [prevLable]="pageTitle" nextLable="Edit" (next)="onEdit()" (prev)="onBack()"></app-navigation>
 
       <img src="assets/Patient_MD.svg" class="img-center" />
       <div class="sd-name">
@@ -57,21 +47,21 @@
         <div class="sd-data">{{item.City}}, {{item.State}} {{item.ZipCode}}</div>
       </div>
       <div class="sd-data-group">
-          <div class="sd-label">Phone</div>
-          <div class="sd-data">{{item.PhoneNumber}}</div>
+        <div class="sd-label">Phone</div>
+        <div class="sd-data">{{item.PhoneNumber}}</div>
       </div>
       <div class="sd-data-group">
-          <div class="sd-label">Email</div>
-          <div class="sd-data">{{item.Email}}</div>
-        </div>
+        <div class="sd-label">Email</div>
+        <div class="sd-data">{{item.Email}}</div>
+      </div>
       <div class="sd-data-group">
-          <div class="sd-label">DOB</div>
-          <div class="sd-data">{{item.DOB}}</div>
-        </div>
+        <div class="sd-label">DOB</div>
+        <div class="sd-data">{{item.DOB}}</div>
+      </div>
       <div class="sd-data-group">
-          <div class="sd-label">Gender</div>
-          <div class="sd-data">{{item.Gender}}</div>
-        </div>
+        <div class="sd-label">Gender</div>
+        <div class="sd-data">{{item.Gender}}</div>
+      </div>
     </div>
   </div>
 </div>

@@ -30,6 +30,7 @@ import { ApiService, ApiMock } from './Services/api.service';
 import { ConfigurationService } from './Services/configuration.service';
 import { StorageService } from './Services/storage.service';
 import { HomeComponent } from './Components/home/home.component';
+import { NavigationComponent } from './Components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { HomeComponent } from './Components/home/home.component';
     SettingListComponent,
     SettingDetailsComponent,
     DaysheetComponent,
-    HomeComponent
+    HomeComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

@@ -13,7 +13,7 @@ import { AuthService } from 'src/app/Services/auth.service';
   styleUrls: ['./provider-list.component.scss']
 })
 export class ProviderListComponent implements OnInit {
-  pageTitle = 'Providers';
+  pageTitle = 'Dashboard';
   items: IPage<IProvider> = {
     Count: 0,
     PageIndex: 0,

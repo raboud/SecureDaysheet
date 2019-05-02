@@ -1,17 +1,6 @@
 <div class="sd-card sd-container">
   <div class="card-body">
-    <div class="row card-title">
-      <div class="col-1" (click)='onBack()'>
-        <div class="navigation">&lt;</div>
-      </div>
-      <div class="col-8">
-        <div class="pagetitle">{{pageTitle}}</div>
-      </div>
-      <div class="col-3" (click)='onEdit()'>
-        <div class="navigation">Edit</div>
-      </div>
-    </div>
-
+    <app-navigation [prevLable]="pageTitle" nextLable="Edit" (next)="onEdit()" (prev)="onBack()"></app-navigation>
     <img src="assets/Provider - Single_MD.svg" class="img-center" />
     <div class="sd-name">
       {{item.Name}}

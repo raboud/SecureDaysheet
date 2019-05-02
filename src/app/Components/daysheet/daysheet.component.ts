@@ -8,7 +8,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./daysheet.component.scss']
 })
 export class DaysheetComponent implements OnInit {
-  pageTitle = 'Daysheet';
+  parent = 'Dashboard';
 
   constructor(
     private location: Location

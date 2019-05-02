@@ -1,14 +1,8 @@
 <div class="sd-container">
   <div class="sd-card">
     <div class="card-body">
-      <div class="row card-title">
-        <div class="col-1" (click)='onBack()'>
-          <div class="navigation">&lt;</div>
-        </div>
-        <div class="col-10">
-          <div class="pagetitle">{{pageTitle}}</div>
-        </div>
-      </div>
+      <app-navigation [prevLable]="pageTitle" (prev)="onBack()"></app-navigation>
+      <div>Report list here!</div>
     </div>
   </div>
 </div>

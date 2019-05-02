@@ -1,16 +1,6 @@
 <div class="sd-card sd-container">
-    <div class="sd-card-body">
-    <div class="row card-title">
-      <div class="col-1" (click)='onBack()'>
-        <div class="navigation">&lt;</div>
-      </div>
-      <div class="col-10">
-        <div class="pagetitle" >{{pageTitle}}</div>
-      </div>
-      <div class="col-1" (click)='onAdd()'>
-          <div class="navigation">+</div>
-      </div>
-    </div>
+  <div class="sd-card-body">
+    <app-navigation [prevLable]="pageTitle" nextSymbol="+" (next)="onAdd()" (prev)="onBack()"></app-navigation>
     <div class="row search">
       <div class="col-1" (click)="onSearch()">
         <img src="assets/Search_SM.svg">
