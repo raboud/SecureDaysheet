@@ -1,5 +1,5 @@
 <div class="sd-card sd-container">
-  <div class="card-body">
+    <div class="sd-card-body">
     <div class="row card-title">
       <div class="col-1" (click)='onBack()'>
         <div class="navigation">&lt;</div>
@@ -42,7 +42,7 @@
       </tbody>
     </table>
   </div>
-  <div class='row'>
+  <div class='row paginaton'>
     <ngb-pagination class='col-9' [collectionSize]="items.Count" [pageSize]='items.PageSize' [(page)]="page"
       [maxSize]="5" [rotate]="true" [ellipses]="false" (pageChange)='onPageChange()' [boundaryLinks]="true">
     </ngb-pagination>
