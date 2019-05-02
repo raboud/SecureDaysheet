@@ -2,13 +2,13 @@
   <div class="card-body">
     <div class="row card-title">
       <div class="col-1" (click)='onBack()'>
-        <h2>&lt;</h2>
+        <div class="navigation">&lt;</div>
       </div>
       <div class="col-10">
-        <h2>{{pageTitle}}</h2>
+        <div class="pagetitle" >{{pageTitle}}</div>
       </div>
       <div class="col-1" (click)='onAdd()'>
-        <h2>+</h2>
+          <div class="navigation">+</div>
       </div>
     </div>
     <div class="row search">
@@ -27,16 +27,16 @@
           </td>
           <td class="col-10">
             <div>
-              <div>
+              <div class="data1">
                 {{item.LastName + ', ' + item.FirstName}}
               </div>
-              <div>
+              <div class="data2">
                 {{item.AddressLine1 + ' ' + item.City + ", " + item.State + " " + item.ZipCode}}
               </div>
             </div>
           </td>
           <td class="col-1">
-            <div class="navigation" tabindex="1">&gt;</div>
+            <div class="list-nav" tabindex="1">&gt;</div>
           </td>
         </tr>
       </tbody>

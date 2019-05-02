@@ -10,7 +10,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,7
 @import url($web-font-path);
 
 body,html {
-  height: 100%;
+  height: 88vh;;
 }
 // Navbar ======================================================================
 
@@ -41,9 +41,34 @@ h2 {
 }
 
 .navigation {
+  font-size: 20pt;
+  font-weight: bold;
+  color: $primary;
+  text-align: center;
+}
+
+.list-nav {
   font-size: 1.5rem;
   color: $primary;
   text-align: center;
+}
+
+.pagetitle {
+  font-size: 18pt;
+  font-weight: 300;
+  color: $primary;
+}
+
+.data1 {
+  font-size: 8pt;
+  font-weight: bold;
+  color: $gray-800;
+}
+
+.data2 {
+  font-size: 8pt;
+  font-weight: bold;
+  color: $gray-600;
 }
 
 .navbar {
@@ -302,7 +327,7 @@ input,
   @extend .col-md-8;
   @extend .offset-md-2;
   @extend .col-12;
-  min-height: 88vh;
+  min-height: 89vh;
 }
 
 .img-center {
