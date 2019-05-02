@@ -15,11 +15,11 @@ body,html {
 // Navbar ======================================================================
 
 .bg-primary {
-  background-color: $dark !important;
+  background-color: $primary !important;
 }
 
 .bg-dark {
-  background-color: $secondary !important;
+  background-color: $dark !important;
 }
 
 .bg-light {
@@ -76,14 +76,16 @@ h2 {
   color: $primary;
 
   &-brand {
-    font-size: 1.75rem;
-    line-height: 2.5rem;
+    font-size: 22pt;
+    line-height: 1.75rem;
     font-weight: bolder;
 
     &-title {
-      font-size: 1.75rem;
-      line-height: 2.5rem;
+//      margin-top: .25rem;
+      font-size: 22pt;
+      line-height: 1.75rem;
       font-weight: bolder;
+      vertical-align: middle;
       color: $primary;
       border-bottom: 4px solid transparent;
       border-image: linear-gradient(
@@ -93,7 +95,14 @@ h2 {
         $dark 100%
       );
       border-image-slice: 1;
+      backface-visibility: hidden;
+
     }
+  }
+  &-name {
+    font-size: 10pt;
+    line-height: 1.0rem;
+    color: $primary;
   }
 
   &-form input,

@@ -1,13 +1,12 @@
 <header>
-  <nav class="navbar navbar-dark bg-primary">
-
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <!-- Brand/logo -->
     <a class="navbar-brand" href="#">
-      <img src="assets/lock.png" width="40" height="40" class="d-inline-block" style="margin-right: 10px;" alt="">
-       <span class="navbar-brand-title">Secure <span style='color: white;'>Daysheet</span>
-      </span>
-        </a>
+      <img src="assets/lock.png" alt="" style="width:40px;">
+    </a>
+    <a class="navbar-brand-title" href="#">Secure <span style='color: white;'>Daysheet</span></a>
 
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ml-auto navbar-name">
       <li *ngIf='authenticated' ngbDropdown class="nav-item dropdown">
         <a ngbDropdownToggle class="nav-link dropdown-toggle text-primary" id="dropdownLogin" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">{{userName}}</a>
@@ -18,4 +17,4 @@
       <img *ngIf='!authenticated' src="assets/Toggle.svg" class="ml-auto toggler" routerLink='login'>
     </ul>
   </nav>
-</header>
+  </header>
