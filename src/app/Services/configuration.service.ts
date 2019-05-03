@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
+import { APP_BASE_HREF, PlatformLocation } from '@angular/common';
 
 import { Observable, Subject, of  } from 'rxjs';
 
@@ -22,15 +23,20 @@ export class ConfigurationService {
 
   constructor(
     private http: HttpClient,
-    private storageService: StorageService
-  ) { }
+    private storageService: StorageService,
+    private platformLocation: PlatformLocation
+  ) {
+    console.log('ConfigurationService ' + (this.platformLocation as any).location.origin);
+    console.log(this.platformLocation.getBaseHrefFromDOM());
+  }
 
 
   load(): Observable<boolean> {
     if (!this.isReady) {
       if (!this.loadingBegun) {
         this.loadingBegun = true;
-        const baseURI = document.baseURI.endsWith('/') ? document.baseURI : `${document.baseURI}/`;
+        let baseURI = (this.platformLocation as any).location.origin + this.platformLocation.getBaseHrefFromDOM();
+        baseURI = baseURI.endsWith('/') ? baseURI : `${baseURI}/`;
         const url = `${baseURI}assets/appsettings.json`;
         this.http.get(url).subscribe((response: IConfiguration) => {
             console.log('server settings loaded');

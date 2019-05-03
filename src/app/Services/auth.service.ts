@@ -339,7 +339,7 @@ export class AuthMockService {
   private SetAuthorizationData() {
     this.IsAuthorized = true;
     this.UserData = {};
-    this.UserData.Name = 'DiMaio, Michael';
+    this.UserData.Name = 'DiMaio';
     this.storage.store('userData', this.UserData);
     // emit observable
     this.storage.store('IsAuthorized', true);

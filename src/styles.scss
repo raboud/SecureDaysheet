@@ -10,8 +10,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,7
 @import url($web-font-path);
 
 body,html {
-  height: 88vh;;
+
 }
+
+//html{position: relative; height: 100%; overflow: hidden;}
 // Navbar ======================================================================
 
 .bg-primary {
@@ -41,22 +43,39 @@ h2 {
 }
 
 .navigation {
-  font-size: 20pt;
-  font-weight: bold;
-  color: $primary;
-  text-align: center;
+  &-right {
+    font-size: 20pt;
+    font-weight: bold;
+    color: $primary;
+    text-align: right;
+  }
+  &-left {
+    font-size: 20pt;
+    font-weight: bold;
+    color: $primary;
+    text-align: left;
+  }
+  &-list {
+    font-size: 20pt;
+    font-weight: bold;
+    color: $primary;
+      text-align: right;
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+  &-label {
+    font-size: 18pt;
+    font-weight: 300;
+    color: $primary;
+  }
 }
 
 .list-nav {
-  font-size: 1.5rem;
-  color: $primary;
-  text-align: center;
-}
-
-.pagetitle {
-  font-size: 18pt;
-  font-weight: 300;
-  color: $primary;
+  font-size: 20pt;
+  font-weight: bold;
+  text-align: right;
+  padding-left: 11px;
+  padding-right: 11px;
 }
 
 .data1 {
@@ -345,21 +364,38 @@ input,
 // Containers ==================================================================
 .sd-container {
   @extend .container;
+  @extend .col-12;
   @extend .col-md-8;
   @extend .offset-md-2;
-  @extend .col-12;
+  @extend .col-lg-4;
+  @extend .offset-lg-4;
   min-height: 83vh;
 }
 
+
 .img-center {
+  height: 98px;
   display: block;
   margin-right: auto;
   margin-left: auto;
 }
 
+
+@media (max-width: 800px){
+  .img-center{height: 80px;}
+}
+
+@media (max-width: 480px){
+  .img-center{height:60px;}
+}
+
+@media (max-width: 375px){
+ .img-center{height: 40px;}
+}
+
 .command-img {
   @extend .img-center;
-  height: 3em;
+  height: 3rem;
 }
 
 .list-img {
@@ -445,5 +481,24 @@ input,
 
 .sd-command-bar {
   color: $primary;
-  font-size: 1rem;
+  font-size: 14pt;
+  text-align: center;
+}
+
+@media (max-width: 800px){
+  .sd-command-bar{font-size: 12pt;}
+}
+
+@media (max-width: 480px){
+  .sd-command-bar{font-size:10pt;}
+}
+
+@media (max-width: 375px){
+ .sd-command-bar{font-size: 8pt;}
+}
+
+.sd-command-bar .col-3{
+  @extend .col-3;
+  padding-left: 0;
+  padding-right: 0
 }

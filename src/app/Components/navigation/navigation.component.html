@@ -1,12 +1,12 @@
 <div class="row card-title">
   <div class="col-6">
-    <div class="navigation" style="text-align: left;" (click)='onPrev()'>
-      {{prevSymbol}} <span class="pagetitle">{{prevLable}}</span>
+    <div class="navigation-left" (click)='onPrev()'>
+      {{prevSymbol}} <span class="navigation-label">{{prevLable}}</span>
     </div>
   </div>
   <div class="col-6">
-    <div class="navigation" style="text-align: right;" (click)='onNext()'>
-        <span class="pagetitle">{{nextLable}} </span>{{nextSymbol}}
+    <div class="navigation-right" (click)='onNext()'>
+        <span class="navigation-label">{{nextLable}} </span>{{nextSymbol}}
     </div>
   </div>
 </div>

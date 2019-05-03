@@ -31,6 +31,7 @@ import { ConfigurationService } from './Services/configuration.service';
 import { StorageService } from './Services/storage.service';
 import { HomeComponent } from './Components/home/home.component';
 import { NavigationComponent } from './Components/navigation/navigation.component';
+import { APP_BASE_HREF, PathLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
