@@ -94,6 +94,9 @@ h2 {
     font-size: 22pt;
     line-height: 1.75rem;
     font-weight: bolder;
+    &-img {
+      width: 40px;
+    }
 
     &-title {
 //      margin-top: .25rem;
@@ -116,6 +119,15 @@ h2 {
 
     }
   }
+
+  @media (max-width: 414px){
+    .navbar-brand-img{ width: 25px; }
+    .navbar-brand-title {
+      font-size: 14pt;
+      line-height: 1.1rem;
+    }
+  }
+
   &-name {
     font-size: 10pt;
     line-height: 1.0rem;
@@ -489,7 +501,7 @@ input,
   .sd-command-bar{font-size:10pt;}
 }
 
-@media (max-width: 375px){
+@media (max-width: 414px){
  .sd-command-bar{font-size: 8pt;}
 }
 
