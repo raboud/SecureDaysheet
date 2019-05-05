@@ -1,6 +1,7 @@
 export interface IPatient {
   Id: string;
   FirstName: string;
+  MiddleName: string;
   LastName: string;
   AddressLine1: string;
   AddressLine2: string;

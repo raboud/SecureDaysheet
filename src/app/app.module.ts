@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -32,6 +33,7 @@ import { StorageService } from './Services/storage.service';
 import { HomeComponent } from './Components/home/home.component';
 import { NavigationComponent } from './Components/navigation/navigation.component';
 import { APP_BASE_HREF, PathLocationStrategy, LocationStrategy } from '@angular/common';
+import { PatientEditComponent } from './Components/patient/patient-edit.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,8 @@ import { APP_BASE_HREF, PathLocationStrategy, LocationStrategy } from '@angular/
     SettingDetailsComponent,
     DaysheetComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    PatientEditComponent
   ],
   imports: [
     BrowserModule,
@@ -61,8 +64,10 @@ import { APP_BASE_HREF, PathLocationStrategy, LocationStrategy } from '@angular/
 //    FormsModule,
     NgbModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule,
   ],
   providers: [
     { provide: AuthService, useClass: AuthMockService},

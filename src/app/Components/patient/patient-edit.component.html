@@ -1,0 +1,63 @@
+<div class="sd-container d-flex ">
+  <div class="row" style="width: 100%">
+    <div class="card col-8 offset-2" style="border: 1 solid red;">
+      <div class="card-body">
+
+        <div class="row card-title">
+          <div class="col-6">
+            <div class="navigation-left" (click)='onCancel()'>
+                <fa-icon [icon]="faChevronLeft"></fa-icon><span class="navigation-label"> Cancel</span>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="navigation-right" (click)='onDone()'>
+              <button [disabled]='!bookForm.form.dirty' class="navigation-label">Done </button>
+            </div>
+          </div>
+        </div>
+        <form #bookForm="ngForm" name="form">
+          <div class="row">
+            <div class="name-img">
+              <img src="assets/Patient_MD.svg" width="100%" />
+            </div>
+            <div class="name-edit-area form-group" >
+              <div class="name-edit-row" >
+                <div class="name-input">
+                  <input #lastName="ngModel"
+                    name="lastName"
+                    type="text"
+                    [(ngModel)]="item.LastName"
+                    placeholder="Last Name"
+                    (focus)="focus=Focus.LastName;"
+                    (keydown.tab)="focus=Focus.None;"
+                    (keydown.shift.tab)="focus=Focus.None;"
+                    class="form-control"
+                  />
+                </div>
+                <div [hidden]="focus !== Focus.LastName" class="name-cancel">
+                    <fa-icon [icon]="faTimeCircle" (click)="item.LastName = '';" ></fa-icon>
+                </div>
+              </div>
+              <div class="name-edit-row">
+                <div class="name-input">
+                  <input type="text" name="firstName" [(ngModel)]="item.FirstName" placeholder="First Name" />
+                </div>
+                <div class="name-cancel">
+                    <fa-icon [icon]="faTimeCircle"></fa-icon>
+                </div>
+              </div>
+              <div class="name-edit-row">
+                <div class="name-input">
+                  <input name="middleName" type="text" [(ngModel)]="item.MiddleName" placeholder="Middle Name" />
+                </div>
+                <div class="name-cancel">
+                  <fa-icon [icon]="faTimeCircle"></fa-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

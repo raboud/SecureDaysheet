@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { IProvider, IPatient } from 'src/app/models';
@@ -18,8 +18,9 @@ export class PatientDetailComponent implements OnInit {
   constructor(
     private api: ApiService,
     private route: ActivatedRoute,
+    private router: Router,
     private location: Location
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -29,18 +30,17 @@ export class PatientDetailComponent implements OnInit {
   }
 
   getItem(id: string) {
-    console.log(id);
-    this.api.getPatient(id).subscribe(item => {
-      this.item = item;
-    });
-  }
+      this.api.getPatient(id).subscribe(item => {
+        this.item = item;
+      });
+    }
 
   onBack() {
     this.location.back();
   }
 
   onEdit() {
-
+    this.router.navigate(['../edit/' + this.item.Id], {relativeTo: this.route});
   }
 
 

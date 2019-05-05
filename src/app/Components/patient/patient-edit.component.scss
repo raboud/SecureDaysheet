@@ -1,0 +1,74 @@
+@import "../../..//variables";
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+
+.col-1, .col-2, .col-3, .col-4,
+.col-5, .col-6, .col-7, .col-8,
+.col-9, .col-10, .col-11, .col-12 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+button {
+  color: $primary;
+  background: none;
+  border: none;
+}
+button:disabled {
+  color: $light;
+}
+
+.card-body {
+  font-size: 12pt;
+  line-height: 36pt;
+  font-weight: bold;
+  color: black;
+}
+
+.name {
+   @extend .row;
+ }
+
+.name-img {
+  @extend .col-2;
+}
+
+.name-edit-area {
+  @extend .col-10;
+}
+
+.name-edit-row {
+  display: flex;
+  border-bottom: 1 solid $light;
+}
+
+.name-input {
+  @extend .col-11;
+}
+
+.name-input input {
+  width: 100%;
+  border: 0px;
+}
+
+.name-cancel {
+  @extend .col-1;
+  color: red;
+  text-align-last: right;
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color: $light;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $light;
+}
+
+::placeholder {
+  color: $light;
+}
+
+input[type=text] {
+  -webkit-appearance: none;
+}
+
+input[type=text]::-ms-clear { display: none; }
