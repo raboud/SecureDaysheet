@@ -7,7 +7,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./message-list.component.scss']
 })
 export class MessageListComponent implements OnInit {
-  pageTitle = 'Dashboard';
+  prevLabel = 'Dashboard';
 
   constructor(
     private location: Location

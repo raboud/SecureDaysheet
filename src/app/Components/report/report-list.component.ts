@@ -7,7 +7,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./report-list.component.scss']
 })
 export class ReportListComponent implements OnInit {
-  pageTitle = 'Dashboard';
+  prevLabel = 'Dashboard';
 
   constructor(
     private location: Location

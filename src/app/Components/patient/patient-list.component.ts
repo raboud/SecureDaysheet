@@ -13,7 +13,7 @@ import { AuthService } from 'src/app/Services/auth.service';
   styleUrls: ['./patient-list.component.scss']
 })
 export class PatientListComponent implements OnInit {
-  pageTitle = 'Dashboard';
+  prevLabel = 'Dashboard';
   items: IPage<IPatient> = {
     Count: 0,
     PageIndex: 0,
@@ -49,10 +49,6 @@ export class PatientListComponent implements OnInit {
     this.location.back();
   }
 
-  onAdd() {
-
-  }
-
   onSearch() {
 
   }
@@ -74,7 +70,7 @@ export class PatientListComponent implements OnInit {
   }
 
   onNew() {
-    this.router.navigate(['./-1'], {relativeTo: this.route});
+    this.router.navigate(['./edit/-1'], {relativeTo: this.route});
   }
 
   onPageChange() {

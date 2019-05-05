@@ -13,7 +13,8 @@ import { ApiService } from 'src/app/Services/api.service';
 })
 export class PatientDetailComponent implements OnInit {
   public item: IPatient = {} as IPatient;
-  pageTitle = 'Patients';
+  prevLabel = 'Patients';
+
   constructor(
     private api: ApiService,
     private route: ActivatedRoute,
