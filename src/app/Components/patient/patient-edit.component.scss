@@ -8,6 +8,21 @@
   padding-right: 0px;
 }
 
+.row {
+  width: 100%;
+  margin: 0;
+}
+
+.card {
+  width:100%;
+  margin-right:0;
+  border: none;
+}
+
+.card-body {
+  padding: 0px;
+}
+
 .nav-button {
   font-size: 12pt;
   font-weight: bold;
@@ -79,7 +94,7 @@ input[type=text]::-ms-clear { display: none; }
 .add {
   @extend .col-1;
   color: green;
-  text-align-last: right;
+  text-align-last: left;
   font-size: 20pt;
 }
 
@@ -92,7 +107,7 @@ input[type=text]::-ms-clear { display: none; }
 
 .add-label {
   @extend .col-11;
-  padding-left: 10px;
+  padding-left: 0px;
  }
 
  .delete-patient {
