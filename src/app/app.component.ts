@@ -9,11 +9,5 @@ export class AppComponent implements OnInit {
   title = 'SecureDaysheet';
 
   ngOnInit() {
-      console.log('ngAfterViewChecked');
-      window.scrollTo(0, 100);
-
-      setTimeout( () => {
-        window.scrollTo(0, 100);
-      }, 1000);
   }
 }

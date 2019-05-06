@@ -7,15 +7,12 @@
   padding-left: 0px;
   padding-right: 0px;
 }
-
-.nav-button {
-  font-size: 12pt;
-  font-weight: bold;
+button {
   color: $primary;
   background: none;
   border: none;
 }
-.nav-button:disabled {
+button:disabled {
   color: $light;
 }
 
@@ -40,11 +37,15 @@
 
 .name-edit-row {
   display: flex;
-  border-bottom: 1 solid $light;
+  border-bottom: 1px solid $light;
 }
 
 .name-input {
   @extend .col-11;
+}
+
+.name-input-icon {
+  font-size: 24pt;
 }
 
 .name-input input {
@@ -52,10 +53,21 @@
   border: 0px;
 }
 
+.name-input input:focus {
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 .name-cancel {
   @extend .col-1;
   color: red;
   text-align-last: right;
+  font-size: 20pt;
 }
 
 ::-webkit-input-placeholder { /* Edge */
@@ -75,46 +87,3 @@ input[type=text] {
 }
 
 input[type=text]::-ms-clear { display: none; }
-
-.add {
-  @extend .col-1;
-  color: green;
-  text-align-last: right;
-  font-size: 20pt;
-}
-
-.add-row {
-  display: flex;
-  border-bottom: 1px solid $light;
-  line-height: 48px;
-  margin-bottom: 25px;
-}
-
-.add-label {
-  @extend .col-11;
-  padding-left: 10px;
- }
-
- .delete-patient {
-   @extend .btn;
-   @extend .btn-block;
-   color: red;
-   width: 100%;
-   border: none;
-   background: $light;
-   font-weight: bold;
-   text-align: center;
-   line-height: 24pt
- }
-
- .delete-patient:focus {
-   border: none;
-   outline: none;
-   -webkit-box-shadow: none;
-   box-shadow: none;
- }
-
- .delete-patient:active {
-  border: none;
-  outline: none;
-}

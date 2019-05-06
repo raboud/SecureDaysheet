@@ -15,6 +15,7 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { LoginComponent } from './Components/login/login.component';
 import { PatientListComponent as PatientListComponent } from './Components/patient/patient-list.component';
 import { PatientDetailComponent } from './Components/patient/patient-detail.component';
+import { EditComponent } from './Components/patient/edit.component';
 import { ProviderListComponent } from './Components/provider/provider-list.component';
 import { ProviderDetailComponent } from './Components/provider/provider-detail.component';
 import { DaysheetComponent } from './Components/daysheet/daysheet.component';
@@ -46,6 +47,7 @@ import { PatientEditComponent } from './Components/patient/patient-edit.componen
     MessageStatusComponent,
     PatientDetailComponent,
     ProviderListComponent,
+    EditComponent,
     ProviderDetailComponent,
     MessageListComponent,
     MessageDetailComponent,

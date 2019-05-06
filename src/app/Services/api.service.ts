@@ -87,6 +87,7 @@ export class ApiMock implements IApiService {
     {
       Id: '1',
       LastName: 'Raboud',
+      MiddleName: '',
       FirstName: 'Robert',
       AddressLine1: '785 Sentry Ridge Xing',
       AddressLine2: '',
@@ -102,6 +103,7 @@ export class ApiMock implements IApiService {
     {
       Id: '2',
       LastName: 'Balsamo',
+      MiddleName: '',
       FirstName: 'Gary',
       AddressLine1: '10123 Rivendell Ln',
       AddressLine2: '',
@@ -117,6 +119,7 @@ export class ApiMock implements IApiService {
     {
       Id: '1',
       LastName: 'Raboud',
+      MiddleName: '',
       FirstName: 'Robert',
       AddressLine1: '785 Sentry Ridge Xing',
       AddressLine2: '',
@@ -133,6 +136,7 @@ export class ApiMock implements IApiService {
     {
       Id: '2',
       LastName: 'Balsamo',
+      MiddleName: '',
       FirstName: 'Gary',
       AddressLine1: '10123 Rivendell Ln',
       AddressLine2: '',
@@ -149,6 +153,7 @@ export class ApiMock implements IApiService {
     {
       Id: '1',
       LastName: 'Raboud',
+      MiddleName: '',
       FirstName: 'Robert',
       AddressLine1: '785 Sentry Ridge Xing',
       AddressLine2: '',
@@ -164,6 +169,7 @@ export class ApiMock implements IApiService {
     {
       Id: '2',
       LastName: 'Balsamo',
+      MiddleName: '',
       FirstName: 'Gary',
       AddressLine1: '10123 Rivendell Ln',
       AddressLine2: '',
@@ -179,6 +185,7 @@ export class ApiMock implements IApiService {
     {
       Id: '1',
       LastName: 'Raboud',
+      MiddleName: '',
       FirstName: 'Robert',
       AddressLine1: '785 Sentry Ridge Xing',
       AddressLine2: '',
@@ -194,6 +201,7 @@ export class ApiMock implements IApiService {
     {
       Id: '2',
       LastName: 'Balsamo',
+      MiddleName: '',
       FirstName: 'Gary',
       AddressLine1: '10123 Rivendell Ln',
       AddressLine2: '',
@@ -209,6 +217,7 @@ export class ApiMock implements IApiService {
     {
       Id: '1',
       LastName: 'Raboud',
+      MiddleName: '',
       FirstName: 'Robert',
       AddressLine1: '785 Sentry Ridge Xing',
       AddressLine2: '',
@@ -224,6 +233,7 @@ export class ApiMock implements IApiService {
     {
       Id: '2',
       LastName: 'Balsamo',
+      MiddleName: '',
       FirstName: 'Gary',
       AddressLine1: '10123 Rivendell Ln',
       AddressLine2: '',
@@ -239,6 +249,7 @@ export class ApiMock implements IApiService {
     {
       Id: '1',
       LastName: 'Raboud',
+      MiddleName: '',
       FirstName: 'Robert',
       AddressLine1: '785 Sentry Ridge Xing',
       AddressLine2: '',
@@ -254,6 +265,7 @@ export class ApiMock implements IApiService {
     {
       Id: '2',
       LastName: 'Balsamo',
+      MiddleName: '',
       FirstName: 'Gary',
       AddressLine1: '10123 Rivendell Ln',
       AddressLine2: '',
@@ -269,6 +281,7 @@ export class ApiMock implements IApiService {
     {
       Id: '1',
       LastName: 'Raboud',
+      MiddleName: '',
       FirstName: 'Robert',
       AddressLine1: '785 Sentry Ridge Xing',
       AddressLine2: '',
@@ -284,6 +297,7 @@ export class ApiMock implements IApiService {
     {
       Id: '2',
       LastName: 'Balsamo',
+      MiddleName: '',
       FirstName: 'Gary',
       AddressLine1: '10123 Rivendell Ln',
       AddressLine2: '',
@@ -299,6 +313,7 @@ export class ApiMock implements IApiService {
     {
       Id: '1',
       LastName: 'Raboud',
+      MiddleName: '',
       FirstName: 'Robert',
       AddressLine1: '785 Sentry Ridge Xing',
       AddressLine2: '',
@@ -314,6 +329,7 @@ export class ApiMock implements IApiService {
     {
       Id: '2',
       LastName: 'Balsamo',
+      MiddleName: '',
       FirstName: 'Gary',
       AddressLine1: '10123 Rivendell Ln',
       AddressLine2: '',

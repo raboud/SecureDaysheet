@@ -5,13 +5,13 @@
 
         <div class="row card-title">
           <div class="col-6">
-            <div class="navigation-left" (click)='onCancel()'>
-                <fa-icon [icon]="faChevronLeft"></fa-icon><span class="navigation-label"> Cancel</span>
+            <div class="nav-button" (click)='onCancel()'>
+                <span> Cancel</span>
             </div>
           </div>
           <div class="col-6">
             <div class="navigation-right" (click)='onDone()'>
-              <button [disabled]='!bookForm.form.dirty' class="navigation-label">Done </button>
+              <button [disabled]='!bookForm.form.dirty' class="nav-button">Done </button>
             </div>
           </div>
         </div>
@@ -21,42 +21,44 @@
               <img src="assets/Patient_MD.svg" width="100%" />
             </div>
             <div class="name-edit-area form-group" >
-              <div class="name-edit-row" >
-                <div class="name-input">
-                  <input #lastName="ngModel"
-                    name="lastName"
-                    type="text"
-                    [(ngModel)]="item.LastName"
-                    placeholder="Last Name"
-                    (focus)="focus=Focus.LastName;"
-                    (keydown.tab)="focus=Focus.None;"
-                    (keydown.shift.tab)="focus=Focus.None;"
-                    class="form-control"
-                  />
-                </div>
-                <div [hidden]="focus !== Focus.LastName" class="name-cancel">
-                    <fa-icon [icon]="faTimeCircle" (click)="item.LastName = '';" ></fa-icon>
-                </div>
-              </div>
-              <div class="name-edit-row">
-                <div class="name-input">
-                  <input type="text" name="firstName" [(ngModel)]="item.FirstName" placeholder="First Name" />
-                </div>
-                <div class="name-cancel">
-                    <fa-icon [icon]="faTimeCircle"></fa-icon>
-                </div>
-              </div>
-              <div class="name-edit-row">
-                <div class="name-input">
-                  <input name="middleName" type="text" [(ngModel)]="item.MiddleName" placeholder="Middle Name" />
-                </div>
-                <div class="name-cancel">
-                  <fa-icon [icon]="faTimeCircle"></fa-icon>
-                </div>
-              </div>
+              <app-edit [(value)] = "item.LastName" placeholder="Last Name" id=lastName [(focus)]="focus"></app-edit>
+              <app-edit [(value)] = "item.FirstName" placeholder="First Name" id=firstName [(focus)]="focus"></app-edit>
+              <app-edit [(value)] = "item.MiddleName" placeholder="Middle Name" id=middleName [(focus)]="focus"></app-edit>
             </div>
           </div>
+          <div class="add-row">
+            <div class="add">
+              <fa-icon [icon]="faPlusCircle" ></fa-icon>
+            </div>
+            <div class="add-label">add address</div>
+          </div>
+          <div class="add-row">
+            <div class="add">
+              <fa-icon [icon]="faPlusCircle" ></fa-icon>
+            </div>
+            <div class="add-label">add contact information</div>
+          </div>
+          <div class="add-row">
+            <div class="add">
+              <fa-icon [icon]="faPlusCircle" ></fa-icon>
+            </div>
+            <div class="add-label">add demographics</div>
+          </div>
+          <div class="add-row">
+            <div class="add">
+              <fa-icon [icon]="faPlusCircle" ></fa-icon>
+            </div>
+            <div class="add-label">add insurance information</div>
+          </div>
+          <div class="add-row">
+            <div class="add">
+              <fa-icon [icon]="faPlusCircle" ></fa-icon>
+            </div>
+            <div class="add-label">add file note</div>
+          </div>
         </form>
+
+        <button class="delete-patient">Delete Patient</button>
       </div>
     </div>
   </div>

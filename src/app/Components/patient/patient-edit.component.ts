@@ -7,15 +7,6 @@ import { GenericValidator } from '../generic-validator';
 import { IPatient } from 'src/app/models';
 import { ApiService } from 'src/app/Services/api.service';
 
-enum Focus {
-  None = 0,
-  LastName,
-  FirstName,
-  MiddleName,
-}
-
-
-
 @Component({
   selector: 'app-patient-edit',
   templateUrl: './patient-edit.component.html',
@@ -26,14 +17,11 @@ export class PatientEditComponent implements OnInit {
   faPlusCircle = faPlusCircle;
   faChevronLeft = faChevronLeft;
 
-  Focus: typeof Focus= Focus;
-  focus = Focus.None;
+  focus = 'none';
 
   prevLabel = 'Cancel';
   nextLabel = 'Done';
   public item: IPatient = {} as IPatient;
-
-
 
   displayMessage: { [key: string]: string } = {};
   private validationMessages: { [key: string]: { [key: string]: string } };
@@ -62,7 +50,7 @@ export class PatientEditComponent implements OnInit {
   }
 
   onCancel() {
-
+    this.location.back();
   }
 
   onDone() {

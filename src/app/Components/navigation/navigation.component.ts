@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { faChevronLeft, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navigation',
@@ -6,10 +7,11 @@ import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
+  @Input() faPrev = faChevronLeft;
+  @Input() faNext: IconDefinition;
+
   @Input() prevLable: string;
-  @Input() prevSymbol = '<';
   @Input() nextLable: string;
-  @Input() nextSymbol: string;
 
   @Output() prev = new EventEmitter<boolean>();
   @Output() next = new EventEmitter<boolean>();

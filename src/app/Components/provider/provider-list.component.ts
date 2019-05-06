@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Subscription, throwError } from 'rxjs';
+import { faChevronLeft, faPlus, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 import { IPage, IProvider } from 'src/app/models';
 import { ApiService } from 'src/app/Services/api.service';
@@ -14,6 +15,10 @@ import { AuthService } from 'src/app/Services/auth.service';
 })
 export class ProviderListComponent implements OnInit {
   prevLabel = 'Dashboard';
+  faChevronRight = faChevronRight;
+  faPlus = faPlus;
+  faChevronLeft = faChevronLeft;
+
   items: IPage<IProvider> = {
     Count: 0,
     PageIndex: 0,
