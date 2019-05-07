@@ -3,9 +3,10 @@ import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
-import { ConfigurationService } from './configuration.service';
-import { IPatient, IProvider, IPage } from '../models';
+import { IPatient, IProvider } from '../models';
 import { Provider } from '@angular/core/src/render3/jit/compiler_facade_interface';
+import { ConfigurationService } from 'src/common/app/Services/configuration.service';
+import { IPage } from 'src/common/app/models';
 
 export interface IApiService {
   load(): Observable<boolean>;

@@ -3,9 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { faTimesCircle, faPlusCircle, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
-import { GenericValidator } from '../generic-validator';
 import { IPatient } from 'src/app/models';
 import { ApiService } from 'src/app/Services/api.service';
+import { GenericValidator } from 'src/common/app/Components/generic-validator';
 
 @Component({
   selector: 'app-patient-edit',

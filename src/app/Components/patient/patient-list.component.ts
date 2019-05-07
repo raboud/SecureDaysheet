@@ -4,9 +4,10 @@ import { Location } from '@angular/common';
 import { Subscription, Observable, throwError } from 'rxjs';
 import { faChevronLeft, faPlus, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-import { IPage, IPatient } from 'src/app/models';
+import { IPatient } from 'src/app/models';
 import { ApiService } from 'src/app/Services/api.service';
-import { AuthService } from 'src/app/Services/auth.service';
+import { AuthService } from 'src/common/app/Services/auth.service';
+import { IPage } from 'src/common/app/models';
 
 @Component({
   selector: 'app-patient-list',

@@ -4,9 +4,10 @@ import { Location } from '@angular/common';
 import { Subscription, throwError } from 'rxjs';
 import { faChevronLeft, faPlus, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-import { IPage, IProvider } from 'src/app/models';
+import { IProvider } from 'src/app/models';
 import { ApiService } from 'src/app/Services/api.service';
-import { AuthService } from 'src/app/Services/auth.service';
+import { AuthService } from 'src/common/app/Services/auth.service';
+import { IPage } from 'src/common/app/models';
 
 @Component({
   selector: 'app-provider-list',
@@ -34,7 +35,6 @@ export class ProviderListComponent implements OnInit {
 
   constructor(
     private api: ApiService,
-    private securityService: AuthService,
     private router: Router,
     private route: ActivatedRoute,
     private location: Location

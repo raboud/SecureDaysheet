@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { AuthService } from 'src/app/Services/auth.service';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/common/app/Services/auth.service';
 
 @Component({
   selector: 'app-header',

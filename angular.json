@@ -20,13 +20,14 @@
             "outputPath": "dist/SecureDaysheet",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": "src/common/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/assets"
+              "src/assets",
+              { "glob": "**/*", "input": "src/common/assets/", "output": "/assets/" }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/common/styles.scss"
             ],
             "scripts": [],
             "es5BrowserSupport": true
@@ -79,7 +80,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": "src/common/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
@@ -87,7 +88,8 @@
             ],
             "scripts": [],
             "assets": [
-              "src/assets"
+              "src/assets",
+              { "glob": "**/*", "input": "src/common/assets/", "output": "/assets/" }
             ]
           }
         },
