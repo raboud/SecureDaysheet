@@ -2,32 +2,19 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
-import { DaysheetComponent } from './Components/daysheet/daysheet.component';
-import { MessageListComponent } from './Components/messages/message-list.component';
-import { MessageDetailComponent } from './Components/messages/message-detail.component';
-import { ProviderListComponent } from './Components/provider/provider-list.component';
-import { ProviderDetailComponent } from './Components/provider/provider-detail.component';
-import { ReportListComponent } from './Components/report/report-list.component';
-import { ReportDetailsComponent } from './Components/report/report-details.component';
-import { SettingListComponent } from './Components/setting/setting-list.component';
-import { SettingDetailsComponent } from './Components/setting/setting-details.component';
 import { AuthGuard } from 'src/common/app/Services/auth.guard';
 import { LoginComponent } from 'src/common/app/Components/login/login.component';
 
 const routes: Routes = [
   {
     path: '', canActivate: [AuthGuard], children: [
-      { path: 'patients', loadChildren: './Patients/patients.module#PatientsModule' },
+      { path: 'daysheet', loadChildren: './Modules/Daysheet/daysheet.module#DaysheetModule' },
+      { path: 'messages', loadChildren: './Modules/Messages/messages.module#MessagesModule' },
+      { path: 'patients', loadChildren: './Modules/Patients/patients.module#PatientsModule' },
+      { path: 'providers', loadChildren: './Modules/Providers/providers.module#ProvidersModule' },
+      { path: 'reports', loadChildren: './Modules/Reports/reports.module#ReportsModule' },
+      { path: 'settings', loadChildren: './Modules/Settings/settings.module#SettingsModule' },
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'daysheet', component: DaysheetComponent },
-      { path: 'messages', component: MessageListComponent },
-      { path: 'messages/:id', component: MessageDetailComponent },
-      { path: 'providers', component: ProviderListComponent },
-      { path: 'providers/:id', component: ProviderDetailComponent },
-      { path: 'reports', component: ReportListComponent },
-      { path: 'reports/:id', component: ReportDetailsComponent },
-      { path: 'settings', component: SettingListComponent },
-      { path: 'settings/:id', component: SettingDetailsComponent }
     ]},
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },

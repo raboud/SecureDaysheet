@@ -36,6 +36,10 @@ const routes: Routes = [
     FontAwesomeModule,
     HeaderComponent,
     FooterComponent,
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    FontAwesomeModule,
   ],
   providers: [
     { provide: AuthService, useClass: AuthMockService},
