@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { DaysheetComponent } from './Components/daysheet/daysheet.component';
-import { HomeComponent } from './Components/home/home.component';
 import { MessageListComponent } from './Components/messages/message-list.component';
 import { MessageDetailComponent } from './Components/messages/message-detail.component';
 import { ProviderListComponent } from './Components/provider/provider-list.component';
@@ -13,7 +12,6 @@ import { ReportDetailsComponent } from './Components/report/report-details.compo
 import { SettingListComponent } from './Components/setting/setting-list.component';
 import { SettingDetailsComponent } from './Components/setting/setting-details.component';
 import { AuthGuard } from 'src/common/app/Services/auth.guard';
-import { SecureCommonModule } from 'src/common/app/secure-common.module';
 import { LoginComponent } from 'src/common/app/Components/login/login.component';
 
 const routes: Routes = [
