@@ -23,11 +23,10 @@ import { faTimesCircle, faPlusCircle, faChevronLeft } from '@fortawesome/free-so
 @Component({
   selector: 'app-edit',
   template: `
-  <div class="name-edit-row" >
-  <div class="col-11 name-input">
+  <div class="row edit-row no-gutters" >
+  <div class="col-11 edit-input">
     <input #lastName="ngModel"
       [id]="id"
-      name="lastName"
       type="text"
       [(ngModel)]="_value"
       [placeholder]="placeholder"
@@ -36,7 +35,7 @@ import { faTimesCircle, faPlusCircle, faChevronLeft } from '@fortawesome/free-so
       (keydown.shift.tab)="setFocus(false)"
     />
   </div>
-  <div [hidden]="focus !== id || _value.length == 0" class="col-1 name-cancel">
+  <div [hidden]="focus !== id || _value.length == 0" class="col-1 edit-cancel">
       <fa-icon [icon]="faTimesCircle" (click)="_value = '';" ></fa-icon>
   </div>
 </div>

@@ -1,43 +1,18 @@
 @import "../../../../common/variables";
 
-.col-1, .col-2, .col-3, .col-4,
-.col-5, .col-6, .col-7, .col-8,
-.col-9, .col-10, .col-11, .col-12 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
 
-button {
-  color: $primary;
-  background: none;
-  border: none;
-}
-button:disabled {
-  color: $light;
-}
-
-.card-body {
-  font-size: 12pt;
-  line-height: 36pt;
-  font-weight: bold;
-  color: black;
-}
-
-.name-edit-row {
+.edit-row {
   display: flex;
   border-bottom: 1px solid $light;
 }
 
-.name-input-icon {
-  font-size: 24pt;
-}
-
-.name-input input {
+.edit-input input {
   width: 100%;
   border: 0px;
+  line-height: 24pt;
 }
 
-.name-input input:focus {
+.edit-input input:focus {
   outline: none;
 }
 
@@ -47,7 +22,7 @@ button:disabled {
   box-shadow: none;
 }
 
-.name-cancel {
+.edit-cancel {
   color: red;
   text-align-last: right;
   font-size: 20pt;

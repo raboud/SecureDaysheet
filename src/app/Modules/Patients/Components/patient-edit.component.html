@@ -3,7 +3,7 @@
     <div class="card" >
       <div class="card-body">
 
-        <div class="row card-title">
+        <div class="row card-title no-gutters">
           <div class="col-6">
             <div class="nav-button" (click)='onCancel()'>
                 <span> Cancel</span>
@@ -16,42 +16,45 @@
           </div>
         </div>
         <form #bookForm="ngForm" name="form">
-          <div class="row">
+          <div class="row no-gutters">
             <div class="col-2">
               <img src="assets/Patient_MD.svg" width="100%" />
             </div>
-            <div class="col-10 form-group" >
+            <div class="col-10" >
               <app-edit [(value)] = "item.LastName" placeholder="Last Name" id=lastName [(focus)]="focus"></app-edit>
               <app-edit [(value)] = "item.FirstName" placeholder="First Name" id=firstName [(focus)]="focus"></app-edit>
               <app-edit [(value)] = "item.MiddleName" placeholder="Middle Name" id=middleName [(focus)]="focus"></app-edit>
             </div>
           </div>
-          <div class="add-row">
+          <div style="line-height: 10px;">
+            <br/>
+          </div>
+          <div class="row add-row no-gutters">
             <div class="col-1 add">
               <fa-icon [icon]="faPlusCircle" ></fa-icon>
             </div>
-            <div class="c0l-11 add-label">add address</div>
+            <div class="add-label">add address</div>
           </div>
-          <div class="add-row">
-            <div class="add">
+          <div class="row add-row no-gutters">
+            <div class="col-1 add">
               <fa-icon [icon]="faPlusCircle" ></fa-icon>
             </div>
             <div class="add-label">add contact information</div>
           </div>
-          <div class="add-row">
-            <div class="add">
+          <div class="row add-row no-gutters">
+            <div class="col-1 add">
               <fa-icon [icon]="faPlusCircle" ></fa-icon>
             </div>
             <div class="add-label">add demographics</div>
           </div>
-          <div class="add-row">
-            <div class="add">
+          <div class="row add-row no-gutters">
+            <div class="col-1 add">
               <fa-icon [icon]="faPlusCircle" ></fa-icon>
             </div>
             <div class="add-label">add insurance information</div>
           </div>
-          <div class="add-row">
-            <div class="add">
+          <div class="row add-row no-gutters">
+            <div class="col-1 add">
               <fa-icon [icon]="faPlusCircle" ></fa-icon>
             </div>
             <div class="add-label">add file note</div>
