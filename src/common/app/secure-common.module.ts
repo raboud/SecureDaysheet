@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes } from '@angular/router';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { LoginComponent } from './Components/login/login.component';
 import { NavigationComponent } from './Components/Navigation/navigation.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
+    NgbModule,
     ReactiveFormsModule,
     FormsModule,
     FontAwesomeModule,
@@ -37,6 +39,7 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     CommonModule,
+    NgbModule,
     ReactiveFormsModule,
     FormsModule,
     FontAwesomeModule,

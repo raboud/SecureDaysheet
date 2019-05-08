@@ -7,6 +7,7 @@ import { SharedModule } from '../Shared/shared.module';
 
 import { MessageListComponent } from './Components/message-list.component';
 import { MessageDetailComponent } from './Components/message-detail.component';
+import { MessageStatusComponent } from './Components/message-status.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     MessageListComponent,
-    MessageDetailComponent
+    MessageDetailComponent,
+    MessageStatusComponent
   ],
   imports: [
     RouterModule.forChild(routes),
