@@ -17,20 +17,20 @@
         </div>
         <form #bookForm="ngForm" name="form">
           <div class="row">
-            <div class="name-img">
+            <div class="col-2">
               <img src="assets/Patient_MD.svg" width="100%" />
             </div>
-            <div class="name-edit-area form-group" >
+            <div class="col-10 form-group" >
               <app-edit [(value)] = "item.LastName" placeholder="Last Name" id=lastName [(focus)]="focus"></app-edit>
               <app-edit [(value)] = "item.FirstName" placeholder="First Name" id=firstName [(focus)]="focus"></app-edit>
               <app-edit [(value)] = "item.MiddleName" placeholder="Middle Name" id=middleName [(focus)]="focus"></app-edit>
             </div>
           </div>
           <div class="add-row">
-            <div class="add">
+            <div class="col-1 add">
               <fa-icon [icon]="faPlusCircle" ></fa-icon>
             </div>
-            <div class="add-label">add address</div>
+            <div class="c0l-11 add-label">add address</div>
           </div>
           <div class="add-row">
             <div class="add">

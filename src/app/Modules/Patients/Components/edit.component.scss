@@ -1,5 +1,4 @@
 @import "../../../../common/variables";
-@import "../../../../../node_modules/bootstrap/scss/bootstrap";
 
 .col-1, .col-2, .col-3, .col-4,
 .col-5, .col-6, .col-7, .col-8,
@@ -7,6 +6,7 @@
   padding-left: 0px;
   padding-right: 0px;
 }
+
 button {
   color: $primary;
   background: none;
@@ -23,25 +23,9 @@ button:disabled {
   color: black;
 }
 
-.name {
-   @extend .row;
- }
-
-.name-img {
-  @extend .col-2;
-}
-
-.name-edit-area {
-  @extend .col-10;
-}
-
 .name-edit-row {
   display: flex;
   border-bottom: 1px solid $light;
-}
-
-.name-input {
-  @extend .col-11;
 }
 
 .name-input-icon {
@@ -64,7 +48,6 @@ button:disabled {
 }
 
 .name-cancel {
-  @extend .col-1;
   color: red;
   text-align-last: right;
   font-size: 20pt;
