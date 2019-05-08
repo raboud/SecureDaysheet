@@ -9,8 +9,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './Components/header/header.component';
-import { FooterComponent } from './Components/footer/footer.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { ProviderListComponent } from './Components/provider/provider-list.component';
 import { ProviderDetailComponent } from './Components/provider/provider-detail.component';
@@ -30,8 +28,6 @@ import { SecureCommonModule } from 'src/common/app/secure-common.module';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
     DashboardComponent,
     MessageStatusComponent,
     ProviderListComponent,

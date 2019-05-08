@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { Router } from '@angular/router';
@@ -16,6 +16,8 @@ export class HeaderComponent implements OnInit {
   private subscription: Subscription;
   public userName = '';
   badge = 0;
+
+  @Input() product: string;
 
   constructor(
     private router: Router,

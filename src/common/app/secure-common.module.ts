@@ -10,6 +10,8 @@ import { ConfigurationService } from './Services/configuration.service';
 import { StorageService } from './Services/storage.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HeaderComponent } from './Components/header/header.component';
+import { FooterComponent } from './Components/footer/footer.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -19,6 +21,8 @@ const routes: Routes = [
   declarations: [
     LoginComponent,
     NavigationComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,
@@ -29,7 +33,9 @@ const routes: Routes = [
   exports: [
     LoginComponent,
     NavigationComponent,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HeaderComponent,
+    FooterComponent,
   ],
   providers: [
     { provide: AuthService, useClass: AuthMockService},
