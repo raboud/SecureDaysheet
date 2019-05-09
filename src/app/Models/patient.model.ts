@@ -1,13 +1,8 @@
-
 export type ContactType = 'Home' | 'Work' | 'Cell' | 'Email' ;
 
 export type AddressType = 'Home' | 'Work' ;
 
-export enum InsuranceType {
- Primary,
- Secondary,
- Rertiary,
-}
+export type InsuranceType = 'Primary' | 'Secondary' | 'Rertiary';
 
 export interface IContactInfo {
   Type: ContactType;
