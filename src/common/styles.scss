@@ -11,7 +11,12 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,7
 
 //html{position: relative; height: 100%; overflow: hidden;}
 // Navbar ======================================================================
-
+.row {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
 .bg-primary {
   background-color: $primary !important;
 }
@@ -381,14 +386,19 @@ input,
 
 // Containers ==================================================================
 .sd-container {
-  @extend .container;
-  @extend .col-12;
-  @extend .col-md-8;
-  @extend .offset-md-2;
-  @extend .col-lg-4;
-  @extend .offset-lg-4;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
   min-height: 83vh;
+  padding-left: 5px;
+  padding-right: 5px;
 }
+
+
+@media (max-width: 650px){
+  .sd-container{max-width: 100%}
+}
+
 
 
 .img-center {
@@ -476,15 +486,30 @@ input,
 }
 
 .sd-data {
+//  @extend .col-12;
+  @extend .secureDaySheet;
+  font-size: 1rem;
+  color: $secondary;
+}
+
+.sd-data-row{
   @extend .col-12;
   @extend .secureDaySheet;
   font-size: 1rem;
   color: $secondary;
 }
 
+.sd-data .col-12 {
+  padding-left: 15;
+  padding-right: 15;
+}
+
 .sd-data-group {
   @extend .row;
+  @extend .no-gutters;
   @extend .secureDaySheet;
+  padding-left: 5;
+  padding-right: 5px;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }

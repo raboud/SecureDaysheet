@@ -3,7 +3,7 @@ import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
-import { IPatient, IProvider } from '../models';
+import { IPatient, IProvider, AddressType, ContactType } from '../models';
 import { Provider } from '@angular/core/src/render3/jit/compiler_facade_interface';
 import { ConfigurationService } from 'src/common/app/Services/configuration.service';
 import { IPage } from 'src/common/app/models';
@@ -90,259 +90,449 @@ export class ApiMock implements IApiService {
       LastName: 'Raboud',
       MiddleName: '',
       FirstName: 'Robert',
-      AddressLine1: '785 Sentry Ridge Xing',
-      AddressLine2: '',
-      City: 'Suwanee',
-      State: 'GA',
-      ZipCode: '30024',
+      Addresses: [
+        {
+          Type: 'Home',
+          AddressLine1: '785 Sentry Ridge Xing',
+          AddressLine2: '',
+          City: 'Suwanee',
+          State: 'GA',
+          ZipCode: '30024',
+        }
+      ],
       InActive: false,
       DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
+      ContactInfos: [
+        {
+          Type: 'Work',
+          Info: '404-991-9375',
+         },
+         {
+           Type: 'Email',
+           Info: 'robert@randreng.com'
+         }
+      ],
       Gender: 'Male',
-      Email: 'robert@randreng.com'
+      Insurance: [],
+      Race: '',
+      Ethnicity: ''
     },
     {
       Id: '2',
       LastName: 'Balsamo',
       MiddleName: '',
       FirstName: 'Gary',
-      AddressLine1: '10123 Rivendell Ln',
-      AddressLine2: '',
-      City: 'Charlette',
-      State: 'NC',
-      ZipCode: '28269',
+      Addresses: [
+        {
+          Type: 'Work',
+          AddressLine1: '10123 Rivendell Ln',
+          AddressLine2: '',
+          City: 'Charlette',
+          State: 'NC',
+          ZipCode: '28269',
+        }
+      ],
       InActive: false,
       DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
+      ContactInfos: [
+        {
+          Type: 'Home',
+          Info: '404-991-9375',
+        },
+        {
+          Type: 'Email',
+          Info: 'robert@randreng.com'
+        }
+      ],
       Gender: 'Male',
-      Email: 'robert@randreng.com'
+      Insurance: [],
+      Race: '',
+      Ethnicity: ''
     },
     {
-      Id: '1',
+      Id: '3',
       LastName: 'Raboud',
       MiddleName: '',
       FirstName: 'Robert',
-      AddressLine1: '785 Sentry Ridge Xing',
-      AddressLine2: '',
-      City: 'Suwanee',
-      State: 'GA',
-      ZipCode: '30024',
+      Addresses: [
+        {
+          Type: 'Home',
+          AddressLine1: '785 Sentry Ridge Xing',
+          AddressLine2: '',
+          City: 'Suwanee',
+          State: 'GA',
+          ZipCode: '30024',
+        }
+      ],
       InActive: false,
       DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
+      ContactInfos: [
+        {
+          Type: 'Work',
+          Info: '404-991-9375',
+         },
+         {
+          Type: 'Email',
+          Info: 'robert@randreng.com'
+        }
+      ],
       Gender: 'Male',
-      Email: 'robert@randreng.com'
-
+      Insurance: [],
+      Race: '',
+      Ethnicity: ''
     },
     {
-      Id: '2',
+      Id: '4',
       LastName: 'Balsamo',
       MiddleName: '',
       FirstName: 'Gary',
-      AddressLine1: '10123 Rivendell Ln',
-      AddressLine2: '',
-      City: 'Charlette',
-      State: 'NC',
-      ZipCode: '28269',
+      Addresses: [
+        {
+          Type: 'Work',
+          AddressLine1: '10123 Rivendell Ln',
+          AddressLine2: '',
+          City: 'Charlette',
+          State: 'NC',
+          ZipCode: '28269',
+        }
+      ],
       InActive: false,
       DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
+      ContactInfos: [
+        {
+          Type: 'Home',
+          Info: '404-991-9375',
+        },
+        {
+          Type: 'Email',
+          Info: 'robert@randreng.com'
+        }
+      ],
       Gender: 'Male',
-      Email: 'robert@randreng.com'
-
+      Insurance: [],
+      Race: '',
+      Ethnicity: ''
     },
     {
-      Id: '1',
+      Id: '5',
       LastName: 'Raboud',
       MiddleName: '',
       FirstName: 'Robert',
-      AddressLine1: '785 Sentry Ridge Xing',
-      AddressLine2: '',
-      City: 'Suwanee',
-      State: 'GA',
-      ZipCode: '30024',
+      Addresses: [
+        {
+          Type: 'Home',
+          AddressLine1: '785 Sentry Ridge Xing',
+          AddressLine2: '',
+          City: 'Suwanee',
+          State: 'GA',
+          ZipCode: '30024',
+        }
+      ],
       InActive: false,
       DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
+      ContactInfos: [
+        {
+          Type: 'Work',
+          Info: '404-991-9375',
+         },
+         {
+           Type: 'Email',
+           Info: 'robert@randreng.com'
+         }
+      ],
       Gender: 'Male',
-      Email: 'robert@randreng.com'
+      Insurance: [],
+      Race: '',
+      Ethnicity: ''
     },
     {
-      Id: '2',
+      Id: '6',
       LastName: 'Balsamo',
       MiddleName: '',
       FirstName: 'Gary',
-      AddressLine1: '10123 Rivendell Ln',
-      AddressLine2: '',
-      City: 'Charlette',
-      State: 'NC',
-      ZipCode: '28269',
+      Addresses: [
+        {
+          Type: 'Work',
+          AddressLine1: '10123 Rivendell Ln',
+          AddressLine2: '',
+          City: 'Charlette',
+          State: 'NC',
+          ZipCode: '28269',
+        }
+      ],
       InActive: false,
       DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
+      ContactInfos: [
+        {
+          Type: 'Home',
+          Info: '404-991-9375',
+        },
+        {
+          Type: 'Email',
+          Info: 'robert@randreng.com'
+        }
+      ],
       Gender: 'Male',
-      Email: 'robert@randreng.com'
+      Insurance: [],
+      Race: '',
+      Ethnicity: ''
     },
     {
-      Id: '1',
+      Id: '7',
       LastName: 'Raboud',
       MiddleName: '',
       FirstName: 'Robert',
-      AddressLine1: '785 Sentry Ridge Xing',
-      AddressLine2: '',
-      City: 'Suwanee',
-      State: 'GA',
-      ZipCode: '30024',
+      Addresses: [
+        {
+          Type: 'Home',
+          AddressLine1: '785 Sentry Ridge Xing',
+          AddressLine2: '',
+          City: 'Suwanee',
+          State: 'GA',
+          ZipCode: '30024',
+        }
+      ],
       InActive: false,
       DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
+      ContactInfos: [
+        {
+          Type: 'Work',
+          Info: '404-991-9375',
+         },
+         {
+           Type: 'Email',
+           Info: 'robert@randreng.com'
+         }
+      ],
       Gender: 'Male',
-      Email: 'robert@randreng.com'
+      Insurance: [],
+      Race: '',
+      Ethnicity: ''
     },
     {
-      Id: '2',
+      Id: '8',
       LastName: 'Balsamo',
       MiddleName: '',
       FirstName: 'Gary',
-      AddressLine1: '10123 Rivendell Ln',
-      AddressLine2: '',
-      City: 'Charlette',
-      State: 'NC',
-      ZipCode: '28269',
+      Addresses: [
+        {
+          Type: 'Work',
+          AddressLine1: '10123 Rivendell Ln',
+          AddressLine2: '',
+          City: 'Charlette',
+          State: 'NC',
+          ZipCode: '28269',
+        }
+      ],
       InActive: false,
       DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
+      ContactInfos: [
+        {
+          Type: 'Home',
+          Info: '404-991-9375',
+        },
+        {
+          Type: 'Email',
+          Info: 'robert@randreng.com'
+        }
+      ],
       Gender: 'Male',
-      Email: 'robert@randreng.com'
+      Insurance: [],
+      Race: '',
+      Ethnicity: ''
     },
     {
-      Id: '1',
+      Id: '9',
       LastName: 'Raboud',
       MiddleName: '',
       FirstName: 'Robert',
-      AddressLine1: '785 Sentry Ridge Xing',
-      AddressLine2: '',
-      City: 'Suwanee',
-      State: 'GA',
-      ZipCode: '30024',
+      Addresses: [
+        {
+          Type: 'Home',
+          AddressLine1: '785 Sentry Ridge Xing',
+          AddressLine2: '',
+          City: 'Suwanee',
+          State: 'GA',
+          ZipCode: '30024',
+        }
+      ],
       InActive: false,
       DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
+      ContactInfos: [
+        {
+          Type: 'Work',
+          Info: '404-991-9375',
+         },
+         {
+           Type: 'Email',
+           Info: 'robert@randreng.com'
+         }
+      ],
       Gender: 'Male',
-      Email: 'robert@randreng.com'
+      Insurance: [],
+      Race: '',
+      Ethnicity: ''
     },
     {
-      Id: '2',
+      Id: '10',
       LastName: 'Balsamo',
       MiddleName: '',
       FirstName: 'Gary',
-      AddressLine1: '10123 Rivendell Ln',
-      AddressLine2: '',
-      City: 'Charlette',
-      State: 'NC',
-      ZipCode: '28269',
+      Addresses: [
+        {
+          Type: 'Work',
+          AddressLine1: '10123 Rivendell Ln',
+          AddressLine2: '',
+          City: 'Charlette',
+          State: 'NC',
+          ZipCode: '28269',
+        }
+      ],
       InActive: false,
       DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
+      ContactInfos: [
+        {
+          Type: 'Home',
+          Info: '404-991-9375',
+        },
+        {
+          Type: 'Email',
+          Info: 'robert@randreng.com'
+        }
+      ],
       Gender: 'Male',
-      Email: 'robert@randreng.com'
+      Insurance: [],
+      Race: '',
+      Ethnicity: ''
     },
     {
-      Id: '1',
+      Id: '11',
       LastName: 'Raboud',
       MiddleName: '',
       FirstName: 'Robert',
-      AddressLine1: '785 Sentry Ridge Xing',
-      AddressLine2: '',
-      City: 'Suwanee',
-      State: 'GA',
-      ZipCode: '30024',
+      Addresses: [
+        {
+          Type: 'Home',
+          AddressLine1: '785 Sentry Ridge Xing',
+          AddressLine2: '',
+          City: 'Suwanee',
+          State: 'GA',
+          ZipCode: '30024',
+        }
+      ],
       InActive: false,
       DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
+      ContactInfos: [
+        {
+          Type: 'Work',
+          Info: '404-991-9375',
+         },
+         {
+           Type: 'Email',
+           Info: 'robert@randreng.com'
+         }
+      ],
       Gender: 'Male',
-      Email: 'robert@randreng.com'
+      Insurance: [],
+      Race: '',
+      Ethnicity: ''
     },
     {
-      Id: '2',
+      Id: '12',
       LastName: 'Balsamo',
       MiddleName: '',
       FirstName: 'Gary',
-      AddressLine1: '10123 Rivendell Ln',
-      AddressLine2: '',
-      City: 'Charlette',
-      State: 'NC',
-      ZipCode: '28269',
+      Addresses: [
+        {
+          Type: 'Work',
+          AddressLine1: '10123 Rivendell Ln',
+          AddressLine2: '',
+          City: 'Charlette',
+          State: 'NC',
+          ZipCode: '28269',
+        }
+      ],
       InActive: false,
       DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
+      ContactInfos: [
+        {
+          Type: 'Home',
+          Info: '404-991-9375',
+        },
+        {
+          Type: 'Email',
+          Info: 'robert@randreng.com'
+        }
+      ],
       Gender: 'Male',
-      Email: 'robert@randreng.com'
+      Insurance: [],
+      Race: '',
+      Ethnicity: ''
     },
     {
-      Id: '1',
+      Id: '13',
       LastName: 'Raboud',
       MiddleName: '',
       FirstName: 'Robert',
-      AddressLine1: '785 Sentry Ridge Xing',
-      AddressLine2: '',
-      City: 'Suwanee',
-      State: 'GA',
-      ZipCode: '30024',
+      Addresses: [
+        {
+          Type: 'Home',
+          AddressLine1: '785 Sentry Ridge Xing',
+          AddressLine2: '',
+          City: 'Suwanee',
+          State: 'GA',
+          ZipCode: '30024',
+        }
+      ],
       InActive: false,
       DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
+      ContactInfos: [
+        {
+          Type: 'Work',
+          Info: '404-991-9375',
+         },
+         {
+           Type: 'Email',
+           Info: 'robert@randreng.com'
+         }
+      ],
       Gender: 'Male',
-      Email: 'robert@randreng.com'
+      Insurance: [],
+      Race: '',
+      Ethnicity: ''
     },
     {
-      Id: '2',
+      Id: '14',
       LastName: 'Balsamo',
       MiddleName: '',
       FirstName: 'Gary',
-      AddressLine1: '10123 Rivendell Ln',
-      AddressLine2: '',
-      City: 'Charlette',
-      State: 'NC',
-      ZipCode: '28269',
+      Addresses: [
+        {
+          Type: 'Work',
+          AddressLine1: '10123 Rivendell Ln',
+          AddressLine2: '',
+          City: 'Charlette',
+          State: 'NC',
+          ZipCode: '28269',
+        }
+      ],
       InActive: false,
       DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
+      ContactInfos: [
+        {
+          Type: 'Home',
+          Info: '404-991-9375',
+        },
+        {
+          Type: 'Email',
+          Info: 'robert@randreng.com'
+        }
+      ],
       Gender: 'Male',
-      Email: 'robert@randreng.com'
+      Insurance: [],
+      Race: '',
+      Ethnicity: ''
     },
-    {
-      Id: '1',
-      LastName: 'Raboud',
-      MiddleName: '',
-      FirstName: 'Robert',
-      AddressLine1: '785 Sentry Ridge Xing',
-      AddressLine2: '',
-      City: 'Suwanee',
-      State: 'GA',
-      ZipCode: '30024',
-      InActive: false,
-      DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
-      Gender: 'Male',
-      Email: 'robert@randreng.com'
-    },
-    {
-      Id: '2',
-      LastName: 'Balsamo',
-      MiddleName: '',
-      FirstName: 'Gary',
-      AddressLine1: '10123 Rivendell Ln',
-      AddressLine2: '',
-      City: 'Charlette',
-      State: 'NC',
-      ZipCode: '28269',
-      InActive: false,
-      DOB: 'January 01, 1980',
-      PhoneNumber: '404-991-9375',
-      Gender: 'Male',
-      Email: 'robert@randreng.com'
-    }
 
   ];
 

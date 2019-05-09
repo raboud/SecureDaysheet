@@ -4,7 +4,7 @@ import { Location } from '@angular/common';
 import { Subscription, Observable, throwError } from 'rxjs';
 import { faChevronLeft, faPlus, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-import { IPatient } from 'src/app/models';
+import { IPatient, AddressType } from 'src/app/models';
 import { ApiService } from 'src/app/Services/api.service';
 import { AuthService } from 'src/common/app/Services/auth.service';
 import { IPage } from 'src/common/app/models';
@@ -83,6 +83,16 @@ export class PatientListComponent implements OnInit {
     if (this.ready) {
       this.getItems(this.items.PageSize, this.page - 1);
     }
+  }
+
+  getAddress(item: IPatient): string{
+    let address = '';
+
+    if (item.Addresses && item.Addresses.length > 0) {
+      address = item.Addresses[0].AddressLine1 + ' ' + item.Addresses[0].City + ", " + item.Addresses[0].State + " " + item.Addresses[0].ZipCode;
+    }
+
+    return address;
   }
 
 }

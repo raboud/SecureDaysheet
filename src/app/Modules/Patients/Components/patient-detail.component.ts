@@ -42,6 +42,4 @@ export class PatientDetailComponent implements OnInit {
   onEdit() {
     this.router.navigate(['../edit/' + this.item.Id], {relativeTo: this.route});
   }
-
-
 }
