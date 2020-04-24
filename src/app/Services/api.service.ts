@@ -4,9 +4,10 @@ import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
 import { IPatient, IProvider, AddressType, ContactType } from '../models';
-import { Provider } from '@angular/core/src/render3/jit/compiler_facade_interface';
+//import { Provider } from '@angular/core/src/render3/jit/compiler_facade_interface';
 import { ConfigurationService } from 'src/common/app/Services/configuration.service';
 import { IPage } from 'src/common/app/models';
+import { Provider } from '@angular/compiler/src/compiler_facade_interface';
 
 export interface IApiService {
   load(): Observable<boolean>;

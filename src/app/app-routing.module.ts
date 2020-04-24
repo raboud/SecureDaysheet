@@ -8,12 +8,12 @@ import { LoginComponent } from 'src/common/app/Components/login/login.component'
 const routes: Routes = [
   {
     path: '', canActivate: [AuthGuard], children: [
-      { path: 'daysheet', loadChildren: './Modules/Daysheet/daysheet.module#DaysheetModule' },
-      { path: 'messages', loadChildren: './Modules/Messages/messages.module#MessagesModule' },
-      { path: 'patients', loadChildren: './Modules/Patients/patients.module#PatientsModule' },
-      { path: 'providers', loadChildren: './Modules/Providers/providers.module#ProvidersModule' },
-      { path: 'reports', loadChildren: './Modules/Reports/reports.module#ReportsModule' },
-      { path: 'settings', loadChildren: './Modules/Settings/settings.module#SettingsModule' },
+      { path: 'daysheet', loadChildren: () => import('./Modules/Daysheet/daysheet.module').then(m => m.DaysheetModule) },
+      { path: 'messages', loadChildren: () => import('./Modules/Messages/messages.module').then(m => m.MessagesModule) },
+      { path: 'patients', loadChildren: () => import('./Modules/Patients/patients.module').then(m => m.PatientsModule) },
+      { path: 'providers', loadChildren: () => import('./Modules/Providers/providers.module').then(m => m.ProvidersModule) },
+      { path: 'reports', loadChildren: () => import('./Modules/Reports/reports.module').then(m => m.ReportsModule) },
+      { path: 'settings', loadChildren: () => import('./Modules/Settings/settings.module').then(m => m.SettingsModule) },
       { path: 'dashboard', component: DashboardComponent },
     ]},
   { path: 'login', component: LoginComponent },
