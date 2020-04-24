@@ -386,7 +386,7 @@ input,
 
 // Containers ==================================================================
 .sd-container {
-  max-width: 650px;
+  max-width: 414px;
   margin-left: auto;
   margin-right: auto;
   min-height: 83vh;
@@ -395,7 +395,7 @@ input,
 }
 
 
-@media (max-width: 650px){
+@media (max-width: 414px){
   .sd-container{max-width: 100%}
 }
 

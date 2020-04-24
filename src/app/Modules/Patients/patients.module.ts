@@ -9,6 +9,7 @@ import { PatientListComponent } from 'src/app/Modules/Patients/Components/patien
 import { PatientDetailComponent } from 'src/app/Modules/Patients/Components/patient-detail.component';
 import { PatientEditComponent } from 'src/app/Modules/Patients/Components/patient-edit.component';
 import { EditComponent } from 'src/app/Modules/Patients/Components/edit.component';
+import { SelectComponent } from './Components/select/select.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,7 @@ const routes: Routes = [
     PatientDetailComponent,
     PatientEditComponent,
     EditComponent,
+    SelectComponent,
   ],
   imports: [
     RouterModule.forChild(routes),

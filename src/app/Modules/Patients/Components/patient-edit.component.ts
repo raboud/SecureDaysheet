@@ -17,6 +17,8 @@ export class PatientEditComponent implements OnInit {
   faPlusCircle = faPlusCircle;
   faChevronLeft = faChevronLeft;
 
+  AddressOptions = ['Home', 'Work'];
+
   focus = 'none';
 
   prevLabel = 'Cancel';

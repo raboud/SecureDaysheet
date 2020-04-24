@@ -44,7 +44,7 @@
       <div class="sd-data-group">
         <div class="sd-label">Address</div>
         <div class="row col-12" style="display: flex;" *ngFor="let address of item.Addresses">
-          <div class="sd-data col-sm-2 col-3">
+          <div class="sd-data col-3">
             {{address.Type}}
           </div>
           <div>
@@ -58,7 +58,7 @@
       <div class="sd-data-group">
         <div class="sd-label">Contact Information</div>
         <div class="row col-12" *ngFor="let info of item.ContactInfos">
-          <div class="sd-data col-sm-2 col-3">{{info.Type}}:</div>
+          <div class="sd-data col-3">{{info.Type}}:</div>
           <div class="sd-data">{{info.Info}}</div>
         </div>
       </div>

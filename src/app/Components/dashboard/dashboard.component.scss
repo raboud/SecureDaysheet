@@ -58,19 +58,6 @@
     transform: translate(-50%, -50%);  }
 }
 
-
-@media (max-width: 800px){
-  .card-img-top{height: 90px;}
-}
-
-@media (max-width: 480px){
-  .card-img-top{height:80px;}
-}
-
-@media (max-width: 375px){
- .card-img-top{height: 70px;}
-}
-
 .card:hover {
 //  border-color: darken($color: $primary, $amount: 100);
   margin: 0px;
