@@ -268,7 +268,7 @@ input,
   }
 }
 
-/deep/ .pagination ul{
+::ng-deep .pagination ul{
   margin-bottom: 0;
 }
 
@@ -506,7 +506,7 @@ input,
 
 .sd-data-group {
   @extend .row;
-  @extend .no-gutters;
+  @extend .no-gutters !optional;
   @extend .secureDaySheet;
   padding-left: 5;
   padding-right: 5px;

@@ -63,11 +63,11 @@ export class ApiService implements IApiService {
     pageIndex: number,
     pageSize: number,
     search?: string
-  ): Observable<IPage<Provider>> {
+  ): Observable<IPage<IProvider>> {
     let url = this.patientUrl;
     url = url + '?pageIndex=' + pageIndex + '&pageSize=' + pageSize;
 
-    return this.http.get<IPage<Provider>>(url + '/page');
+    return this.http.get<IPage<IProvider>>(url + '/page');
   }
 
   getProvider(id: string): Observable<IProvider> {

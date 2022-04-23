@@ -22,7 +22,6 @@
             "main": "src/main.ts",
             "polyfills": "src/common/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "src/assets",
               { "glob": "**/*", "input": "src/common/assets/", "output": "/assets/" }
@@ -31,7 +30,12 @@
               "src/common/styles.scss"
             ],
             "scripts": [],
-            "es5BrowserSupport": true
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -44,7 +48,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -62,7 +65,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -99,18 +103,6 @@
               { "glob": "**/*", "input": "src/common/assets/", "output": "/assets/" }
             ]
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -129,15 +121,6 @@
             "production": {
               "devServerTarget": "SecureDaysheet:serve:production"
             }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
